@@ -1,0 +1,16 @@
+from supabase import create_client
+from config import SUPABASE_URL, SUPABASE_KEY
+
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+def log_progress(phone, day):
+    """
+    Updates the reading progress of a user for the given day.
+    Creates a new row if not exists.
+    """
+    existing = supabase.table("progress").select("*").eq("phone", phone).execute()
+    
+    if existing.data:
+        supabase.table("progress").update({"last_day": day}).eq("phone", phone).execute()
+    else:
+        supabase.table("progress").insert({"phone": phone, "last_day": day}).execute()

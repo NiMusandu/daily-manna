@@ -1,0 +1,2557 @@
+[
+  {
+    "day": 1,
+    "date": "2025-01-01",
+    "old_testament": "Genesis 1; Genesis 2",
+    "new_testament": "Matthew 1",
+    "psalm_or_gospel": "Psalms 1"
+  },
+  {
+    "day": 2,
+    "date": "2025-01-02",
+    "old_testament": "Genesis 3; Genesis 4",
+    "new_testament": "Matthew 2",
+    "psalm_or_gospel": "Psalms 2"
+  },
+  {
+    "day": 3,
+    "date": "2025-01-03",
+    "old_testament": "Genesis 5; Genesis 6",
+    "new_testament": "Matthew 3",
+    "psalm_or_gospel": "Psalms 3"
+  },
+  {
+    "day": 4,
+    "date": "2025-01-04",
+    "old_testament": "Genesis 7; Genesis 8",
+    "new_testament": "Matthew 4",
+    "psalm_or_gospel": "Psalms 4"
+  },
+  {
+    "day": 5,
+    "date": "2025-01-05",
+    "old_testament": "Genesis 9; Genesis 10",
+    "new_testament": "Matthew 5",
+    "psalm_or_gospel": "Psalms 5"
+  },
+  {
+    "day": 6,
+    "date": "2025-01-06",
+    "old_testament": "Genesis 11; Genesis 12",
+    "new_testament": "Matthew 6",
+    "psalm_or_gospel": "Psalms 6"
+  },
+  {
+    "day": 7,
+    "date": "2025-01-07",
+    "old_testament": "Genesis 13; Genesis 14",
+    "new_testament": "Matthew 7",
+    "psalm_or_gospel": "Psalms 7"
+  },
+  {
+    "day": 8,
+    "date": "2025-01-08",
+    "old_testament": "Genesis 15; Genesis 16",
+    "new_testament": "Matthew 8",
+    "psalm_or_gospel": "Psalms 8"
+  },
+  {
+    "day": 9,
+    "date": "2025-01-09",
+    "old_testament": "Genesis 17; Genesis 18",
+    "new_testament": "Matthew 9",
+    "psalm_or_gospel": "Psalms 9"
+  },
+  {
+    "day": 10,
+    "date": "2025-01-10",
+    "old_testament": "Genesis 19; Genesis 20",
+    "new_testament": "Matthew 10",
+    "psalm_or_gospel": "Psalms 10"
+  },
+  {
+    "day": 11,
+    "date": "2025-01-11",
+    "old_testament": "Genesis 21; Genesis 22",
+    "new_testament": "Matthew 11",
+    "psalm_or_gospel": "Psalms 11"
+  },
+  {
+    "day": 12,
+    "date": "2025-01-12",
+    "old_testament": "Genesis 23; Genesis 24",
+    "new_testament": "Matthew 12",
+    "psalm_or_gospel": "Psalms 12"
+  },
+  {
+    "day": 13,
+    "date": "2025-01-13",
+    "old_testament": "Genesis 25; Genesis 26",
+    "new_testament": "Matthew 13",
+    "psalm_or_gospel": "Psalms 13"
+  },
+  {
+    "day": 14,
+    "date": "2025-01-14",
+    "old_testament": "Genesis 27; Genesis 28",
+    "new_testament": "Matthew 14",
+    "psalm_or_gospel": "Psalms 14"
+  },
+  {
+    "day": 15,
+    "date": "2025-01-15",
+    "old_testament": "Genesis 29; Genesis 30",
+    "new_testament": "Matthew 15",
+    "psalm_or_gospel": "Psalms 15"
+  },
+  {
+    "day": 16,
+    "date": "2025-01-16",
+    "old_testament": "Genesis 31; Genesis 32",
+    "new_testament": "Matthew 16",
+    "psalm_or_gospel": "Psalms 16"
+  },
+  {
+    "day": 17,
+    "date": "2025-01-17",
+    "old_testament": "Genesis 33; Genesis 34",
+    "new_testament": "Matthew 17",
+    "psalm_or_gospel": "Psalms 17"
+  },
+  {
+    "day": 18,
+    "date": "2025-01-18",
+    "old_testament": "Genesis 35; Genesis 36",
+    "new_testament": "Matthew 18",
+    "psalm_or_gospel": "Psalms 18"
+  },
+  {
+    "day": 19,
+    "date": "2025-01-19",
+    "old_testament": "Genesis 37; Genesis 38",
+    "new_testament": "Matthew 19",
+    "psalm_or_gospel": "Psalms 19"
+  },
+  {
+    "day": 20,
+    "date": "2025-01-20",
+    "old_testament": "Genesis 39; Genesis 40",
+    "new_testament": "Matthew 20",
+    "psalm_or_gospel": "Psalms 20"
+  },
+  {
+    "day": 21,
+    "date": "2025-01-21",
+    "old_testament": "Genesis 41; Genesis 42",
+    "new_testament": "Matthew 21",
+    "psalm_or_gospel": "Psalms 21"
+  },
+  {
+    "day": 22,
+    "date": "2025-01-22",
+    "old_testament": "Genesis 43; Genesis 44",
+    "new_testament": "Matthew 22",
+    "psalm_or_gospel": "Psalms 22"
+  },
+  {
+    "day": 23,
+    "date": "2025-01-23",
+    "old_testament": "Genesis 45; Genesis 46",
+    "new_testament": "Matthew 23",
+    "psalm_or_gospel": "Psalms 23"
+  },
+  {
+    "day": 24,
+    "date": "2025-01-24",
+    "old_testament": "Genesis 47; Genesis 48",
+    "new_testament": "Matthew 24",
+    "psalm_or_gospel": "Psalms 24"
+  },
+  {
+    "day": 25,
+    "date": "2025-01-25",
+    "old_testament": "Genesis 49; Genesis 50",
+    "new_testament": "Matthew 25",
+    "psalm_or_gospel": "Psalms 25"
+  },
+  {
+    "day": 26,
+    "date": "2025-01-26",
+    "old_testament": "Exodus 1; Exodus 2",
+    "new_testament": "Matthew 26",
+    "psalm_or_gospel": "Psalms 26"
+  },
+  {
+    "day": 27,
+    "date": "2025-01-27",
+    "old_testament": "Exodus 3; Exodus 4",
+    "new_testament": "Matthew 27",
+    "psalm_or_gospel": "Psalms 27"
+  },
+  {
+    "day": 28,
+    "date": "2025-01-28",
+    "old_testament": "Exodus 5; Exodus 6",
+    "new_testament": "Matthew 28",
+    "psalm_or_gospel": "Psalms 28"
+  },
+  {
+    "day": 29,
+    "date": "2025-01-29",
+    "old_testament": "Exodus 7; Exodus 8",
+    "new_testament": "Mark 1",
+    "psalm_or_gospel": "Psalms 29"
+  },
+  {
+    "day": 30,
+    "date": "2025-01-30",
+    "old_testament": "Exodus 9; Exodus 10",
+    "new_testament": "Mark 2",
+    "psalm_or_gospel": "Psalms 30"
+  },
+  {
+    "day": 31,
+    "date": "2025-01-31",
+    "old_testament": "Exodus 11; Exodus 12",
+    "new_testament": "Mark 3",
+    "psalm_or_gospel": "Psalms 31"
+  },
+  {
+    "day": 32,
+    "date": "2025-02-01",
+    "old_testament": "Exodus 13; Exodus 14",
+    "new_testament": "Mark 4",
+    "psalm_or_gospel": "Psalms 32"
+  },
+  {
+    "day": 33,
+    "date": "2025-02-02",
+    "old_testament": "Exodus 15; Exodus 16",
+    "new_testament": "Mark 5",
+    "psalm_or_gospel": "Psalms 33"
+  },
+  {
+    "day": 34,
+    "date": "2025-02-03",
+    "old_testament": "Exodus 17; Exodus 18",
+    "new_testament": "Mark 6",
+    "psalm_or_gospel": "Psalms 34"
+  },
+  {
+    "day": 35,
+    "date": "2025-02-04",
+    "old_testament": "Exodus 19; Exodus 20",
+    "new_testament": "Mark 7",
+    "psalm_or_gospel": "Psalms 35"
+  },
+  {
+    "day": 36,
+    "date": "2025-02-05",
+    "old_testament": "Exodus 21; Exodus 22",
+    "new_testament": "Mark 8",
+    "psalm_or_gospel": "Psalms 36"
+  },
+  {
+    "day": 37,
+    "date": "2025-02-06",
+    "old_testament": "Exodus 23; Exodus 24",
+    "new_testament": "Mark 9",
+    "psalm_or_gospel": "Psalms 37"
+  },
+  {
+    "day": 38,
+    "date": "2025-02-07",
+    "old_testament": "Exodus 25; Exodus 26",
+    "new_testament": "Mark 10",
+    "psalm_or_gospel": "Psalms 38"
+  },
+  {
+    "day": 39,
+    "date": "2025-02-08",
+    "old_testament": "Exodus 27; Exodus 28",
+    "new_testament": "Mark 11",
+    "psalm_or_gospel": "Psalms 39"
+  },
+  {
+    "day": 40,
+    "date": "2025-02-09",
+    "old_testament": "Exodus 29; Exodus 30",
+    "new_testament": "Mark 12",
+    "psalm_or_gospel": "Psalms 40"
+  },
+  {
+    "day": 41,
+    "date": "2025-02-10",
+    "old_testament": "Exodus 31; Exodus 32",
+    "new_testament": "Mark 13",
+    "psalm_or_gospel": "Psalms 41"
+  },
+  {
+    "day": 42,
+    "date": "2025-02-11",
+    "old_testament": "Exodus 33; Exodus 34",
+    "new_testament": "Mark 14",
+    "psalm_or_gospel": "Psalms 42"
+  },
+  {
+    "day": 43,
+    "date": "2025-02-12",
+    "old_testament": "Exodus 35; Exodus 36",
+    "new_testament": "Mark 15",
+    "psalm_or_gospel": "Psalms 43"
+  },
+  {
+    "day": 44,
+    "date": "2025-02-13",
+    "old_testament": "Exodus 37; Exodus 38",
+    "new_testament": "Mark 16",
+    "psalm_or_gospel": "Psalms 44"
+  },
+  {
+    "day": 45,
+    "date": "2025-02-14",
+    "old_testament": "Exodus 39; Exodus 40",
+    "new_testament": "Luke 1",
+    "psalm_or_gospel": "Psalms 45"
+  },
+  {
+    "day": 46,
+    "date": "2025-02-15",
+    "old_testament": "Leviticus 1; Leviticus 2",
+    "new_testament": "Luke 2",
+    "psalm_or_gospel": "Psalms 46"
+  },
+  {
+    "day": 47,
+    "date": "2025-02-16",
+    "old_testament": "Leviticus 3; Leviticus 4",
+    "new_testament": "Luke 3",
+    "psalm_or_gospel": "Psalms 47"
+  },
+  {
+    "day": 48,
+    "date": "2025-02-17",
+    "old_testament": "Leviticus 5; Leviticus 6",
+    "new_testament": "Luke 4",
+    "psalm_or_gospel": "Psalms 48"
+  },
+  {
+    "day": 49,
+    "date": "2025-02-18",
+    "old_testament": "Leviticus 7; Leviticus 8",
+    "new_testament": "Luke 5",
+    "psalm_or_gospel": "Psalms 49"
+  },
+  {
+    "day": 50,
+    "date": "2025-02-19",
+    "old_testament": "Leviticus 9; Leviticus 10",
+    "new_testament": "Luke 6",
+    "psalm_or_gospel": "Psalms 50"
+  },
+  {
+    "day": 51,
+    "date": "2025-02-20",
+    "old_testament": "Leviticus 11; Leviticus 12",
+    "new_testament": "Luke 7",
+    "psalm_or_gospel": "Psalms 51"
+  },
+  {
+    "day": 52,
+    "date": "2025-02-21",
+    "old_testament": "Leviticus 13; Leviticus 14",
+    "new_testament": "Luke 8",
+    "psalm_or_gospel": "Psalms 52"
+  },
+  {
+    "day": 53,
+    "date": "2025-02-22",
+    "old_testament": "Leviticus 15; Leviticus 16",
+    "new_testament": "Luke 9",
+    "psalm_or_gospel": "Psalms 53"
+  },
+  {
+    "day": 54,
+    "date": "2025-02-23",
+    "old_testament": "Leviticus 17; Leviticus 18",
+    "new_testament": "Luke 10",
+    "psalm_or_gospel": "Psalms 54"
+  },
+  {
+    "day": 55,
+    "date": "2025-02-24",
+    "old_testament": "Leviticus 19; Leviticus 20",
+    "new_testament": "Luke 11",
+    "psalm_or_gospel": "Psalms 55"
+  },
+  {
+    "day": 56,
+    "date": "2025-02-25",
+    "old_testament": "Leviticus 21; Leviticus 22",
+    "new_testament": "Luke 12",
+    "psalm_or_gospel": "Psalms 56"
+  },
+  {
+    "day": 57,
+    "date": "2025-02-26",
+    "old_testament": "Leviticus 23; Leviticus 24",
+    "new_testament": "Luke 13",
+    "psalm_or_gospel": "Psalms 57"
+  },
+  {
+    "day": 58,
+    "date": "2025-02-27",
+    "old_testament": "Leviticus 25; Leviticus 26",
+    "new_testament": "Luke 14",
+    "psalm_or_gospel": "Psalms 58"
+  },
+  {
+    "day": 59,
+    "date": "2025-02-28",
+    "old_testament": "Leviticus 27; Numbers 1",
+    "new_testament": "Luke 15",
+    "psalm_or_gospel": "Psalms 59"
+  },
+  {
+    "day": 60,
+    "date": "2025-03-01",
+    "old_testament": "Numbers 2; Numbers 3",
+    "new_testament": "Luke 16",
+    "psalm_or_gospel": "Psalms 60"
+  },
+  {
+    "day": 61,
+    "date": "2025-03-02",
+    "old_testament": "Numbers 4; Numbers 5",
+    "new_testament": "Luke 17",
+    "psalm_or_gospel": "Psalms 61"
+  },
+  {
+    "day": 62,
+    "date": "2025-03-03",
+    "old_testament": "Numbers 6; Numbers 7",
+    "new_testament": "Luke 18",
+    "psalm_or_gospel": "Psalms 62"
+  },
+  {
+    "day": 63,
+    "date": "2025-03-04",
+    "old_testament": "Numbers 8; Numbers 9",
+    "new_testament": "Luke 19",
+    "psalm_or_gospel": "Psalms 63"
+  },
+  {
+    "day": 64,
+    "date": "2025-03-05",
+    "old_testament": "Numbers 10; Numbers 11",
+    "new_testament": "Luke 20",
+    "psalm_or_gospel": "Psalms 64"
+  },
+  {
+    "day": 65,
+    "date": "2025-03-06",
+    "old_testament": "Numbers 12; Numbers 13",
+    "new_testament": "Luke 21",
+    "psalm_or_gospel": "Psalms 65"
+  },
+  {
+    "day": 66,
+    "date": "2025-03-07",
+    "old_testament": "Numbers 14; Numbers 15",
+    "new_testament": "Luke 22",
+    "psalm_or_gospel": "Psalms 66"
+  },
+  {
+    "day": 67,
+    "date": "2025-03-08",
+    "old_testament": "Numbers 16; Numbers 17",
+    "new_testament": "Luke 23",
+    "psalm_or_gospel": "Psalms 67"
+  },
+  {
+    "day": 68,
+    "date": "2025-03-09",
+    "old_testament": "Numbers 18; Numbers 19",
+    "new_testament": "Luke 24",
+    "psalm_or_gospel": "Psalms 68"
+  },
+  {
+    "day": 69,
+    "date": "2025-03-10",
+    "old_testament": "Numbers 20; Numbers 21",
+    "new_testament": "John 1",
+    "psalm_or_gospel": "Psalms 69"
+  },
+  {
+    "day": 70,
+    "date": "2025-03-11",
+    "old_testament": "Numbers 22; Numbers 23",
+    "new_testament": "John 2",
+    "psalm_or_gospel": "Psalms 70"
+  },
+  {
+    "day": 71,
+    "date": "2025-03-12",
+    "old_testament": "Numbers 24; Numbers 25",
+    "new_testament": "John 3",
+    "psalm_or_gospel": "Psalms 71"
+  },
+  {
+    "day": 72,
+    "date": "2025-03-13",
+    "old_testament": "Numbers 26; Numbers 27",
+    "new_testament": "John 4",
+    "psalm_or_gospel": "Psalms 72"
+  },
+  {
+    "day": 73,
+    "date": "2025-03-14",
+    "old_testament": "Numbers 28; Numbers 29",
+    "new_testament": "John 5",
+    "psalm_or_gospel": "Psalms 73"
+  },
+  {
+    "day": 74,
+    "date": "2025-03-15",
+    "old_testament": "Numbers 30; Numbers 31",
+    "new_testament": "John 6",
+    "psalm_or_gospel": "Psalms 74"
+  },
+  {
+    "day": 75,
+    "date": "2025-03-16",
+    "old_testament": "Numbers 32; Numbers 33",
+    "new_testament": "John 7",
+    "psalm_or_gospel": "Psalms 75"
+  },
+  {
+    "day": 76,
+    "date": "2025-03-17",
+    "old_testament": "Numbers 34; Numbers 35",
+    "new_testament": "John 8",
+    "psalm_or_gospel": "Psalms 76"
+  },
+  {
+    "day": 77,
+    "date": "2025-03-18",
+    "old_testament": "Numbers 36; Deuteronomy 1",
+    "new_testament": "John 9",
+    "psalm_or_gospel": "Psalms 77"
+  },
+  {
+    "day": 78,
+    "date": "2025-03-19",
+    "old_testament": "Deuteronomy 2; Deuteronomy 3",
+    "new_testament": "John 10",
+    "psalm_or_gospel": "Psalms 78"
+  },
+  {
+    "day": 79,
+    "date": "2025-03-20",
+    "old_testament": "Deuteronomy 4; Deuteronomy 5",
+    "new_testament": "John 11",
+    "psalm_or_gospel": "Psalms 79"
+  },
+  {
+    "day": 80,
+    "date": "2025-03-21",
+    "old_testament": "Deuteronomy 6; Deuteronomy 7",
+    "new_testament": "John 12",
+    "psalm_or_gospel": "Psalms 80"
+  },
+  {
+    "day": 81,
+    "date": "2025-03-22",
+    "old_testament": "Deuteronomy 8; Deuteronomy 9",
+    "new_testament": "John 13",
+    "psalm_or_gospel": "Psalms 81"
+  },
+  {
+    "day": 82,
+    "date": "2025-03-23",
+    "old_testament": "Deuteronomy 10; Deuteronomy 11",
+    "new_testament": "John 14",
+    "psalm_or_gospel": "Psalms 82"
+  },
+  {
+    "day": 83,
+    "date": "2025-03-24",
+    "old_testament": "Deuteronomy 12; Deuteronomy 13",
+    "new_testament": "John 15",
+    "psalm_or_gospel": "Psalms 83"
+  },
+  {
+    "day": 84,
+    "date": "2025-03-25",
+    "old_testament": "Deuteronomy 14; Deuteronomy 15",
+    "new_testament": "John 16",
+    "psalm_or_gospel": "Psalms 84"
+  },
+  {
+    "day": 85,
+    "date": "2025-03-26",
+    "old_testament": "Deuteronomy 16; Deuteronomy 17",
+    "new_testament": "John 17",
+    "psalm_or_gospel": "Psalms 85"
+  },
+  {
+    "day": 86,
+    "date": "2025-03-27",
+    "old_testament": "Deuteronomy 18; Deuteronomy 19",
+    "new_testament": "John 18",
+    "psalm_or_gospel": "Psalms 86"
+  },
+  {
+    "day": 87,
+    "date": "2025-03-28",
+    "old_testament": "Deuteronomy 20; Deuteronomy 21",
+    "new_testament": "John 19",
+    "psalm_or_gospel": "Psalms 87"
+  },
+  {
+    "day": 88,
+    "date": "2025-03-29",
+    "old_testament": "Deuteronomy 22; Deuteronomy 23",
+    "new_testament": "John 20",
+    "psalm_or_gospel": "Psalms 88"
+  },
+  {
+    "day": 89,
+    "date": "2025-03-30",
+    "old_testament": "Deuteronomy 24; Deuteronomy 25",
+    "new_testament": "John 21",
+    "psalm_or_gospel": "Psalms 89"
+  },
+  {
+    "day": 90,
+    "date": "2025-03-31",
+    "old_testament": "Deuteronomy 26; Deuteronomy 27",
+    "new_testament": "Acts 1",
+    "psalm_or_gospel": "Psalms 90"
+  },
+  {
+    "day": 91,
+    "date": "2025-04-01",
+    "old_testament": "Deuteronomy 28; Deuteronomy 29",
+    "new_testament": "Acts 2",
+    "psalm_or_gospel": "Psalms 91"
+  },
+  {
+    "day": 92,
+    "date": "2025-04-02",
+    "old_testament": "Deuteronomy 30; Deuteronomy 31",
+    "new_testament": "Acts 3",
+    "psalm_or_gospel": "Psalms 92"
+  },
+  {
+    "day": 93,
+    "date": "2025-04-03",
+    "old_testament": "Deuteronomy 32; Deuteronomy 33",
+    "new_testament": "Acts 4",
+    "psalm_or_gospel": "Psalms 93"
+  },
+  {
+    "day": 94,
+    "date": "2025-04-04",
+    "old_testament": "Deuteronomy 34; Joshua 1",
+    "new_testament": "Acts 5",
+    "psalm_or_gospel": "Psalms 94"
+  },
+  {
+    "day": 95,
+    "date": "2025-04-05",
+    "old_testament": "Joshua 2; Joshua 3",
+    "new_testament": "Acts 6",
+    "psalm_or_gospel": "Psalms 95"
+  },
+  {
+    "day": 96,
+    "date": "2025-04-06",
+    "old_testament": "Joshua 4; Joshua 5",
+    "new_testament": "Acts 7",
+    "psalm_or_gospel": "Psalms 96"
+  },
+  {
+    "day": 97,
+    "date": "2025-04-07",
+    "old_testament": "Joshua 6; Joshua 7",
+    "new_testament": "Acts 8",
+    "psalm_or_gospel": "Psalms 97"
+  },
+  {
+    "day": 98,
+    "date": "2025-04-08",
+    "old_testament": "Joshua 8; Joshua 9",
+    "new_testament": "Acts 9",
+    "psalm_or_gospel": "Psalms 98"
+  },
+  {
+    "day": 99,
+    "date": "2025-04-09",
+    "old_testament": "Joshua 10; Joshua 11",
+    "new_testament": "Acts 10",
+    "psalm_or_gospel": "Psalms 99"
+  },
+  {
+    "day": 100,
+    "date": "2025-04-10",
+    "old_testament": "Joshua 12; Joshua 13",
+    "new_testament": "Acts 11",
+    "psalm_or_gospel": "Psalms 100"
+  },
+  {
+    "day": 101,
+    "date": "2025-04-11",
+    "old_testament": "Joshua 14; Joshua 15",
+    "new_testament": "Acts 12",
+    "psalm_or_gospel": "Psalms 101"
+  },
+  {
+    "day": 102,
+    "date": "2025-04-12",
+    "old_testament": "Joshua 16; Joshua 17",
+    "new_testament": "Acts 13",
+    "psalm_or_gospel": "Psalms 102"
+  },
+  {
+    "day": 103,
+    "date": "2025-04-13",
+    "old_testament": "Joshua 18; Joshua 19",
+    "new_testament": "Acts 14",
+    "psalm_or_gospel": "Psalms 103"
+  },
+  {
+    "day": 104,
+    "date": "2025-04-14",
+    "old_testament": "Joshua 20; Joshua 21",
+    "new_testament": "Acts 15",
+    "psalm_or_gospel": "Psalms 104"
+  },
+  {
+    "day": 105,
+    "date": "2025-04-15",
+    "old_testament": "Joshua 22; Joshua 23",
+    "new_testament": "Acts 16",
+    "psalm_or_gospel": "Psalms 105"
+  },
+  {
+    "day": 106,
+    "date": "2025-04-16",
+    "old_testament": "Joshua 24; Judges 1",
+    "new_testament": "Acts 17",
+    "psalm_or_gospel": "Psalms 106"
+  },
+  {
+    "day": 107,
+    "date": "2025-04-17",
+    "old_testament": "Judges 2; Judges 3",
+    "new_testament": "Acts 18",
+    "psalm_or_gospel": "Psalms 107"
+  },
+  {
+    "day": 108,
+    "date": "2025-04-18",
+    "old_testament": "Judges 4; Judges 5",
+    "new_testament": "Acts 19",
+    "psalm_or_gospel": "Psalms 108"
+  },
+  {
+    "day": 109,
+    "date": "2025-04-19",
+    "old_testament": "Judges 6; Judges 7",
+    "new_testament": "Acts 20",
+    "psalm_or_gospel": "Psalms 109"
+  },
+  {
+    "day": 110,
+    "date": "2025-04-20",
+    "old_testament": "Judges 8; Judges 9",
+    "new_testament": "Acts 21",
+    "psalm_or_gospel": "Psalms 110"
+  },
+  {
+    "day": 111,
+    "date": "2025-04-21",
+    "old_testament": "Judges 10; Judges 11",
+    "new_testament": "Acts 22",
+    "psalm_or_gospel": "Psalms 111"
+  },
+  {
+    "day": 112,
+    "date": "2025-04-22",
+    "old_testament": "Judges 12; Judges 13",
+    "new_testament": "Acts 23",
+    "psalm_or_gospel": "Psalms 112"
+  },
+  {
+    "day": 113,
+    "date": "2025-04-23",
+    "old_testament": "Judges 14; Judges 15",
+    "new_testament": "Acts 24",
+    "psalm_or_gospel": "Psalms 113"
+  },
+  {
+    "day": 114,
+    "date": "2025-04-24",
+    "old_testament": "Judges 16; Judges 17",
+    "new_testament": "Acts 25",
+    "psalm_or_gospel": "Psalms 114"
+  },
+  {
+    "day": 115,
+    "date": "2025-04-25",
+    "old_testament": "Judges 18; Judges 19",
+    "new_testament": "Acts 26",
+    "psalm_or_gospel": "Psalms 115"
+  },
+  {
+    "day": 116,
+    "date": "2025-04-26",
+    "old_testament": "Judges 20; Judges 21",
+    "new_testament": "Acts 27",
+    "psalm_or_gospel": "Psalms 116"
+  },
+  {
+    "day": 117,
+    "date": "2025-04-27",
+    "old_testament": "Ruth 1; Ruth 2",
+    "new_testament": "Acts 28",
+    "psalm_or_gospel": "Psalms 117"
+  },
+  {
+    "day": 118,
+    "date": "2025-04-28",
+    "old_testament": "Ruth 3; Ruth 4",
+    "new_testament": "Romans 1",
+    "psalm_or_gospel": "Psalms 118"
+  },
+  {
+    "day": 119,
+    "date": "2025-04-29",
+    "old_testament": "1 Samuel 1; 1 Samuel 2",
+    "new_testament": "Romans 2",
+    "psalm_or_gospel": "Psalms 119"
+  },
+  {
+    "day": 120,
+    "date": "2025-04-30",
+    "old_testament": "1 Samuel 3; 1 Samuel 4",
+    "new_testament": "Romans 3",
+    "psalm_or_gospel": "Psalms 120"
+  },
+  {
+    "day": 121,
+    "date": "2025-05-01",
+    "old_testament": "1 Samuel 5; 1 Samuel 6",
+    "new_testament": "Romans 4",
+    "psalm_or_gospel": "Psalms 121"
+  },
+  {
+    "day": 122,
+    "date": "2025-05-02",
+    "old_testament": "1 Samuel 7; 1 Samuel 8",
+    "new_testament": "Romans 5",
+    "psalm_or_gospel": "Psalms 122"
+  },
+  {
+    "day": 123,
+    "date": "2025-05-03",
+    "old_testament": "1 Samuel 9; 1 Samuel 10",
+    "new_testament": "Romans 6",
+    "psalm_or_gospel": "Psalms 123"
+  },
+  {
+    "day": 124,
+    "date": "2025-05-04",
+    "old_testament": "1 Samuel 11; 1 Samuel 12",
+    "new_testament": "Romans 7",
+    "psalm_or_gospel": "Psalms 124"
+  },
+  {
+    "day": 125,
+    "date": "2025-05-05",
+    "old_testament": "1 Samuel 13; 1 Samuel 14",
+    "new_testament": "Romans 8",
+    "psalm_or_gospel": "Psalms 125"
+  },
+  {
+    "day": 126,
+    "date": "2025-05-06",
+    "old_testament": "1 Samuel 15; 1 Samuel 16",
+    "new_testament": "Romans 9",
+    "psalm_or_gospel": "Psalms 126"
+  },
+  {
+    "day": 127,
+    "date": "2025-05-07",
+    "old_testament": "1 Samuel 17; 1 Samuel 18",
+    "new_testament": "Romans 10",
+    "psalm_or_gospel": "Psalms 127"
+  },
+  {
+    "day": 128,
+    "date": "2025-05-08",
+    "old_testament": "1 Samuel 19; 1 Samuel 20",
+    "new_testament": "Romans 11",
+    "psalm_or_gospel": "Psalms 128"
+  },
+  {
+    "day": 129,
+    "date": "2025-05-09",
+    "old_testament": "1 Samuel 21; 1 Samuel 22",
+    "new_testament": "Romans 12",
+    "psalm_or_gospel": "Psalms 129"
+  },
+  {
+    "day": 130,
+    "date": "2025-05-10",
+    "old_testament": "1 Samuel 23; 1 Samuel 24",
+    "new_testament": "Romans 13",
+    "psalm_or_gospel": "Psalms 130"
+  },
+  {
+    "day": 131,
+    "date": "2025-05-11",
+    "old_testament": "1 Samuel 25; 1 Samuel 26",
+    "new_testament": "Romans 14",
+    "psalm_or_gospel": "Psalms 131"
+  },
+  {
+    "day": 132,
+    "date": "2025-05-12",
+    "old_testament": "1 Samuel 27; 1 Samuel 28",
+    "new_testament": "Romans 15",
+    "psalm_or_gospel": "Psalms 132"
+  },
+  {
+    "day": 133,
+    "date": "2025-05-13",
+    "old_testament": "1 Samuel 29; 1 Samuel 30",
+    "new_testament": "Romans 16",
+    "psalm_or_gospel": "Psalms 133"
+  },
+  {
+    "day": 134,
+    "date": "2025-05-14",
+    "old_testament": "1 Samuel 31; 2 Samuel 1",
+    "new_testament": "1 Corinthians 1",
+    "psalm_or_gospel": "Psalms 134"
+  },
+  {
+    "day": 135,
+    "date": "2025-05-15",
+    "old_testament": "2 Samuel 2; 2 Samuel 3",
+    "new_testament": "1 Corinthians 2",
+    "psalm_or_gospel": "Psalms 135"
+  },
+  {
+    "day": 136,
+    "date": "2025-05-16",
+    "old_testament": "2 Samuel 4; 2 Samuel 5",
+    "new_testament": "1 Corinthians 3",
+    "psalm_or_gospel": "Psalms 136"
+  },
+  {
+    "day": 137,
+    "date": "2025-05-17",
+    "old_testament": "2 Samuel 6; 2 Samuel 7",
+    "new_testament": "1 Corinthians 4",
+    "psalm_or_gospel": "Psalms 137"
+  },
+  {
+    "day": 138,
+    "date": "2025-05-18",
+    "old_testament": "2 Samuel 8; 2 Samuel 9",
+    "new_testament": "1 Corinthians 5",
+    "psalm_or_gospel": "Psalms 138"
+  },
+  {
+    "day": 139,
+    "date": "2025-05-19",
+    "old_testament": "2 Samuel 10; 2 Samuel 11",
+    "new_testament": "1 Corinthians 6",
+    "psalm_or_gospel": "Psalms 139"
+  },
+  {
+    "day": 140,
+    "date": "2025-05-20",
+    "old_testament": "2 Samuel 12; 2 Samuel 13",
+    "new_testament": "1 Corinthians 7",
+    "psalm_or_gospel": "Psalms 140"
+  },
+  {
+    "day": 141,
+    "date": "2025-05-21",
+    "old_testament": "2 Samuel 14; 2 Samuel 15",
+    "new_testament": "1 Corinthians 8",
+    "psalm_or_gospel": "Psalms 141"
+  },
+  {
+    "day": 142,
+    "date": "2025-05-22",
+    "old_testament": "2 Samuel 16; 2 Samuel 17",
+    "new_testament": "1 Corinthians 9",
+    "psalm_or_gospel": "Psalms 142"
+  },
+  {
+    "day": 143,
+    "date": "2025-05-23",
+    "old_testament": "2 Samuel 18; 2 Samuel 19",
+    "new_testament": "1 Corinthians 10",
+    "psalm_or_gospel": "Psalms 143"
+  },
+  {
+    "day": 144,
+    "date": "2025-05-24",
+    "old_testament": "2 Samuel 20; 2 Samuel 21",
+    "new_testament": "1 Corinthians 11",
+    "psalm_or_gospel": "Psalms 144"
+  },
+  {
+    "day": 145,
+    "date": "2025-05-25",
+    "old_testament": "2 Samuel 22; 2 Samuel 23",
+    "new_testament": "1 Corinthians 12",
+    "psalm_or_gospel": "Psalms 145"
+  },
+  {
+    "day": 146,
+    "date": "2025-05-26",
+    "old_testament": "2 Samuel 24; 1 Kings 1",
+    "new_testament": "1 Corinthians 13",
+    "psalm_or_gospel": "Psalms 146"
+  },
+  {
+    "day": 147,
+    "date": "2025-05-27",
+    "old_testament": "1 Kings 2; 1 Kings 3",
+    "new_testament": "1 Corinthians 14",
+    "psalm_or_gospel": "Psalms 147"
+  },
+  {
+    "day": 148,
+    "date": "2025-05-28",
+    "old_testament": "1 Kings 4; 1 Kings 5",
+    "new_testament": "1 Corinthians 15",
+    "psalm_or_gospel": "Psalms 148"
+  },
+  {
+    "day": 149,
+    "date": "2025-05-29",
+    "old_testament": "1 Kings 6; 1 Kings 7",
+    "new_testament": "1 Corinthians 16",
+    "psalm_or_gospel": "Psalms 149"
+  },
+  {
+    "day": 150,
+    "date": "2025-05-30",
+    "old_testament": "1 Kings 8; 1 Kings 9",
+    "new_testament": "2 Corinthians 1",
+    "psalm_or_gospel": "Psalms 150"
+  },
+  {
+    "day": 151,
+    "date": "2025-05-31",
+    "old_testament": "1 Kings 10; 1 Kings 11",
+    "new_testament": "2 Corinthians 2",
+    "psalm_or_gospel": "Proverbs 1"
+  },
+  {
+    "day": 152,
+    "date": "2025-06-01",
+    "old_testament": "1 Kings 12; 1 Kings 13",
+    "new_testament": "2 Corinthians 3",
+    "psalm_or_gospel": "Proverbs 2"
+  },
+  {
+    "day": 153,
+    "date": "2025-06-02",
+    "old_testament": "1 Kings 14; 1 Kings 15",
+    "new_testament": "2 Corinthians 4",
+    "psalm_or_gospel": "Proverbs 3"
+  },
+  {
+    "day": 154,
+    "date": "2025-06-03",
+    "old_testament": "1 Kings 16; 1 Kings 17",
+    "new_testament": "2 Corinthians 5",
+    "psalm_or_gospel": "Proverbs 4"
+  },
+  {
+    "day": 155,
+    "date": "2025-06-04",
+    "old_testament": "1 Kings 18; 1 Kings 19",
+    "new_testament": "2 Corinthians 6",
+    "psalm_or_gospel": "Proverbs 5"
+  },
+  {
+    "day": 156,
+    "date": "2025-06-05",
+    "old_testament": "1 Kings 20; 1 Kings 21",
+    "new_testament": "2 Corinthians 7",
+    "psalm_or_gospel": "Proverbs 6"
+  },
+  {
+    "day": 157,
+    "date": "2025-06-06",
+    "old_testament": "1 Kings 22; 2 Kings 1",
+    "new_testament": "2 Corinthians 8",
+    "psalm_or_gospel": "Proverbs 7"
+  },
+  {
+    "day": 158,
+    "date": "2025-06-07",
+    "old_testament": "2 Kings 2; 2 Kings 3",
+    "new_testament": "2 Corinthians 9",
+    "psalm_or_gospel": "Proverbs 8"
+  },
+  {
+    "day": 159,
+    "date": "2025-06-08",
+    "old_testament": "2 Kings 4; 2 Kings 5",
+    "new_testament": "2 Corinthians 10",
+    "psalm_or_gospel": "Proverbs 9"
+  },
+  {
+    "day": 160,
+    "date": "2025-06-09",
+    "old_testament": "2 Kings 6; 2 Kings 7",
+    "new_testament": "2 Corinthians 11",
+    "psalm_or_gospel": "Proverbs 10"
+  },
+  {
+    "day": 161,
+    "date": "2025-06-10",
+    "old_testament": "2 Kings 8; 2 Kings 9",
+    "new_testament": "2 Corinthians 12",
+    "psalm_or_gospel": "Proverbs 11"
+  },
+  {
+    "day": 162,
+    "date": "2025-06-11",
+    "old_testament": "2 Kings 10; 2 Kings 11",
+    "new_testament": "2 Corinthians 13",
+    "psalm_or_gospel": "Proverbs 12"
+  },
+  {
+    "day": 163,
+    "date": "2025-06-12",
+    "old_testament": "2 Kings 12; 2 Kings 13",
+    "new_testament": "Galatians 1",
+    "psalm_or_gospel": "Proverbs 13"
+  },
+  {
+    "day": 164,
+    "date": "2025-06-13",
+    "old_testament": "2 Kings 14; 2 Kings 15",
+    "new_testament": "Galatians 2",
+    "psalm_or_gospel": "Proverbs 14"
+  },
+  {
+    "day": 165,
+    "date": "2025-06-14",
+    "old_testament": "2 Kings 16; 2 Kings 17",
+    "new_testament": "Galatians 3",
+    "psalm_or_gospel": "Proverbs 15"
+  },
+  {
+    "day": 166,
+    "date": "2025-06-15",
+    "old_testament": "2 Kings 18; 2 Kings 19",
+    "new_testament": "Galatians 4",
+    "psalm_or_gospel": "Proverbs 16"
+  },
+  {
+    "day": 167,
+    "date": "2025-06-16",
+    "old_testament": "2 Kings 20; 2 Kings 21",
+    "new_testament": "Galatians 5",
+    "psalm_or_gospel": "Proverbs 17"
+  },
+  {
+    "day": 168,
+    "date": "2025-06-17",
+    "old_testament": "2 Kings 22; 2 Kings 23",
+    "new_testament": "Galatians 6",
+    "psalm_or_gospel": "Proverbs 18"
+  },
+  {
+    "day": 169,
+    "date": "2025-06-18",
+    "old_testament": "2 Kings 24; 2 Kings 25",
+    "new_testament": "Ephesians 1",
+    "psalm_or_gospel": "Proverbs 19"
+  },
+  {
+    "day": 170,
+    "date": "2025-06-19",
+    "old_testament": "1 Chronicles 1; 1 Chronicles 2",
+    "new_testament": "Ephesians 2",
+    "psalm_or_gospel": "Proverbs 20"
+  },
+  {
+    "day": 171,
+    "date": "2025-06-20",
+    "old_testament": "1 Chronicles 3; 1 Chronicles 4",
+    "new_testament": "Ephesians 3",
+    "psalm_or_gospel": "Proverbs 21"
+  },
+  {
+    "day": 172,
+    "date": "2025-06-21",
+    "old_testament": "1 Chronicles 5; 1 Chronicles 6",
+    "new_testament": "Ephesians 4",
+    "psalm_or_gospel": "Proverbs 22"
+  },
+  {
+    "day": 173,
+    "date": "2025-06-22",
+    "old_testament": "1 Chronicles 7; 1 Chronicles 8",
+    "new_testament": "Ephesians 5",
+    "psalm_or_gospel": "Proverbs 23"
+  },
+  {
+    "day": 174,
+    "date": "2025-06-23",
+    "old_testament": "1 Chronicles 9; 1 Chronicles 10",
+    "new_testament": "Ephesians 6",
+    "psalm_or_gospel": "Proverbs 24"
+  },
+  {
+    "day": 175,
+    "date": "2025-06-24",
+    "old_testament": "1 Chronicles 11; 1 Chronicles 12",
+    "new_testament": "Philippians 1",
+    "psalm_or_gospel": "Proverbs 25"
+  },
+  {
+    "day": 176,
+    "date": "2025-06-25",
+    "old_testament": "1 Chronicles 13; 1 Chronicles 14",
+    "new_testament": "Philippians 2",
+    "psalm_or_gospel": "Proverbs 26"
+  },
+  {
+    "day": 177,
+    "date": "2025-06-26",
+    "old_testament": "1 Chronicles 15; 1 Chronicles 16",
+    "new_testament": "Philippians 3",
+    "psalm_or_gospel": "Proverbs 27"
+  },
+  {
+    "day": 178,
+    "date": "2025-06-27",
+    "old_testament": "1 Chronicles 17; 1 Chronicles 18",
+    "new_testament": "Philippians 4",
+    "psalm_or_gospel": "Proverbs 28"
+  },
+  {
+    "day": 179,
+    "date": "2025-06-28",
+    "old_testament": "1 Chronicles 19; 1 Chronicles 20",
+    "new_testament": "Colossians 1",
+    "psalm_or_gospel": "Proverbs 29"
+  },
+  {
+    "day": 180,
+    "date": "2025-06-29",
+    "old_testament": "1 Chronicles 21; 1 Chronicles 22",
+    "new_testament": "Colossians 2",
+    "psalm_or_gospel": "Proverbs 30"
+  },
+  {
+    "day": 181,
+    "date": "2025-06-30",
+    "old_testament": "1 Chronicles 23; 1 Chronicles 24",
+    "new_testament": "Colossians 3",
+    "psalm_or_gospel": "Proverbs 31"
+  },
+  {
+    "day": 182,
+    "date": "2025-07-01",
+    "old_testament": "1 Chronicles 25; 1 Chronicles 26",
+    "new_testament": "Colossians 4",
+    "psalm_or_gospel": "Ecclesiastes 1"
+  },
+  {
+    "day": 183,
+    "date": "2025-07-02",
+    "old_testament": "1 Chronicles 27; 1 Chronicles 28",
+    "new_testament": "1 Thessalonians 1",
+    "psalm_or_gospel": "Ecclesiastes 2"
+  },
+  {
+    "day": 184,
+    "date": "2025-07-03",
+    "old_testament": "1 Chronicles 29; 2 Chronicles 1",
+    "new_testament": "1 Thessalonians 2",
+    "psalm_or_gospel": "Ecclesiastes 3"
+  },
+  {
+    "day": 185,
+    "date": "2025-07-04",
+    "old_testament": "2 Chronicles 2; 2 Chronicles 3",
+    "new_testament": "1 Thessalonians 3",
+    "psalm_or_gospel": "Ecclesiastes 4"
+  },
+  {
+    "day": 186,
+    "date": "2025-07-05",
+    "old_testament": "2 Chronicles 4; 2 Chronicles 5",
+    "new_testament": "1 Thessalonians 4",
+    "psalm_or_gospel": "Ecclesiastes 5"
+  },
+  {
+    "day": 187,
+    "date": "2025-07-06",
+    "old_testament": "2 Chronicles 6; 2 Chronicles 7",
+    "new_testament": "1 Thessalonians 5",
+    "psalm_or_gospel": "Ecclesiastes 6"
+  },
+  {
+    "day": 188,
+    "date": "2025-07-07",
+    "old_testament": "2 Chronicles 8; 2 Chronicles 9",
+    "new_testament": "2 Thessalonians 1",
+    "psalm_or_gospel": "Ecclesiastes 7"
+  },
+  {
+    "day": 189,
+    "date": "2025-07-08",
+    "old_testament": "2 Chronicles 10; 2 Chronicles 11",
+    "new_testament": "2 Thessalonians 2",
+    "psalm_or_gospel": "Ecclesiastes 8"
+  },
+  {
+    "day": 190,
+    "date": "2025-07-09",
+    "old_testament": "2 Chronicles 12; 2 Chronicles 13",
+    "new_testament": "2 Thessalonians 3",
+    "psalm_or_gospel": "Ecclesiastes 9"
+  },
+  {
+    "day": 191,
+    "date": "2025-07-10",
+    "old_testament": "2 Chronicles 14; 2 Chronicles 15",
+    "new_testament": "1 Timothy 1",
+    "psalm_or_gospel": "Ecclesiastes 10"
+  },
+  {
+    "day": 192,
+    "date": "2025-07-11",
+    "old_testament": "2 Chronicles 16; 2 Chronicles 17",
+    "new_testament": "1 Timothy 2",
+    "psalm_or_gospel": "Ecclesiastes 11"
+  },
+  {
+    "day": 193,
+    "date": "2025-07-12",
+    "old_testament": "2 Chronicles 18; 2 Chronicles 19",
+    "new_testament": "1 Timothy 3",
+    "psalm_or_gospel": "Ecclesiastes 12"
+  },
+  {
+    "day": 194,
+    "date": "2025-07-13",
+    "old_testament": "2 Chronicles 20; 2 Chronicles 21",
+    "new_testament": "1 Timothy 4",
+    "psalm_or_gospel": "Song of Solomon 1"
+  },
+  {
+    "day": 195,
+    "date": "2025-07-14",
+    "old_testament": "2 Chronicles 22; 2 Chronicles 23",
+    "new_testament": "1 Timothy 5",
+    "psalm_or_gospel": "Song of Solomon 2"
+  },
+  {
+    "day": 196,
+    "date": "2025-07-15",
+    "old_testament": "2 Chronicles 24; 2 Chronicles 25",
+    "new_testament": "1 Timothy 6",
+    "psalm_or_gospel": "Song of Solomon 3"
+  },
+  {
+    "day": 197,
+    "date": "2025-07-16",
+    "old_testament": "2 Chronicles 26; 2 Chronicles 27",
+    "new_testament": "2 Timothy 1",
+    "psalm_or_gospel": "Song of Solomon 4"
+  },
+  {
+    "day": 198,
+    "date": "2025-07-17",
+    "old_testament": "2 Chronicles 28; 2 Chronicles 29",
+    "new_testament": "2 Timothy 2",
+    "psalm_or_gospel": "Song of Solomon 5"
+  },
+  {
+    "day": 199,
+    "date": "2025-07-18",
+    "old_testament": "2 Chronicles 30; 2 Chronicles 31",
+    "new_testament": "2 Timothy 3",
+    "psalm_or_gospel": "Song of Solomon 6"
+  },
+  {
+    "day": 200,
+    "date": "2025-07-19",
+    "old_testament": "2 Chronicles 32; 2 Chronicles 33",
+    "new_testament": "2 Timothy 4",
+    "psalm_or_gospel": "Song of Solomon 7"
+  },
+  {
+    "day": 201,
+    "date": "2025-07-20",
+    "old_testament": "2 Chronicles 34; 2 Chronicles 35",
+    "new_testament": "Titus 1",
+    "psalm_or_gospel": "Song of Solomon 8"
+  },
+  {
+    "day": 202,
+    "date": "2025-07-21",
+    "old_testament": "2 Chronicles 36; Ezra 1",
+    "new_testament": "Titus 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 203,
+    "date": "2025-07-22",
+    "old_testament": "Ezra 2; Ezra 3",
+    "new_testament": "Titus 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 204,
+    "date": "2025-07-23",
+    "old_testament": "Ezra 4; Ezra 5",
+    "new_testament": "Philemon 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 205,
+    "date": "2025-07-24",
+    "old_testament": "Ezra 6; Ezra 7",
+    "new_testament": "Hebrews 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 206,
+    "date": "2025-07-25",
+    "old_testament": "Ezra 8; Ezra 9",
+    "new_testament": "Hebrews 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 207,
+    "date": "2025-07-26",
+    "old_testament": "Ezra 10; Nehemiah 1",
+    "new_testament": "Hebrews 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 208,
+    "date": "2025-07-27",
+    "old_testament": "Nehemiah 2; Nehemiah 3",
+    "new_testament": "Hebrews 4",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 209,
+    "date": "2025-07-28",
+    "old_testament": "Nehemiah 4; Nehemiah 5",
+    "new_testament": "Hebrews 5",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 210,
+    "date": "2025-07-29",
+    "old_testament": "Nehemiah 6; Nehemiah 7",
+    "new_testament": "Hebrews 6",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 211,
+    "date": "2025-07-30",
+    "old_testament": "Nehemiah 8; Nehemiah 9",
+    "new_testament": "Hebrews 7",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 212,
+    "date": "2025-07-31",
+    "old_testament": "Nehemiah 10; Nehemiah 11",
+    "new_testament": "Hebrews 8",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 213,
+    "date": "2025-08-01",
+    "old_testament": "Nehemiah 12; Nehemiah 13",
+    "new_testament": "Hebrews 9",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 214,
+    "date": "2025-08-02",
+    "old_testament": "Esther 1; Esther 2",
+    "new_testament": "Hebrews 10",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 215,
+    "date": "2025-08-03",
+    "old_testament": "Esther 3; Esther 4",
+    "new_testament": "Hebrews 11",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 216,
+    "date": "2025-08-04",
+    "old_testament": "Esther 5; Esther 6",
+    "new_testament": "Hebrews 12",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 217,
+    "date": "2025-08-05",
+    "old_testament": "Esther 7; Esther 8",
+    "new_testament": "Hebrews 13",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 218,
+    "date": "2025-08-06",
+    "old_testament": "Esther 9; Esther 10",
+    "new_testament": "James 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 219,
+    "date": "2025-08-07",
+    "old_testament": "Job 1; Job 2",
+    "new_testament": "James 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 220,
+    "date": "2025-08-08",
+    "old_testament": "Job 3; Job 4",
+    "new_testament": "James 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 221,
+    "date": "2025-08-09",
+    "old_testament": "Job 5; Job 6",
+    "new_testament": "James 4",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 222,
+    "date": "2025-08-10",
+    "old_testament": "Job 7; Job 8",
+    "new_testament": "James 5",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 223,
+    "date": "2025-08-11",
+    "old_testament": "Job 9; Job 10",
+    "new_testament": "1 Peter 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 224,
+    "date": "2025-08-12",
+    "old_testament": "Job 11; Job 12",
+    "new_testament": "1 Peter 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 225,
+    "date": "2025-08-13",
+    "old_testament": "Job 13; Job 14",
+    "new_testament": "1 Peter 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 226,
+    "date": "2025-08-14",
+    "old_testament": "Job 15; Job 16",
+    "new_testament": "1 Peter 4",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 227,
+    "date": "2025-08-15",
+    "old_testament": "Job 17; Job 18",
+    "new_testament": "1 Peter 5",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 228,
+    "date": "2025-08-16",
+    "old_testament": "Job 19; Job 20",
+    "new_testament": "2 Peter 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 229,
+    "date": "2025-08-17",
+    "old_testament": "Job 21; Job 22",
+    "new_testament": "2 Peter 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 230,
+    "date": "2025-08-18",
+    "old_testament": "Job 23; Job 24",
+    "new_testament": "2 Peter 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 231,
+    "date": "2025-08-19",
+    "old_testament": "Job 25; Job 26",
+    "new_testament": "1 John 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 232,
+    "date": "2025-08-20",
+    "old_testament": "Job 27; Job 28",
+    "new_testament": "1 John 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 233,
+    "date": "2025-08-21",
+    "old_testament": "Job 29; Job 30",
+    "new_testament": "1 John 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 234,
+    "date": "2025-08-22",
+    "old_testament": "Job 31; Job 32",
+    "new_testament": "1 John 4",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 235,
+    "date": "2025-08-23",
+    "old_testament": "Job 33; Job 34",
+    "new_testament": "1 John 5",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 236,
+    "date": "2025-08-24",
+    "old_testament": "Job 35; Job 36",
+    "new_testament": "2 John 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 237,
+    "date": "2025-08-25",
+    "old_testament": "Job 37; Job 38",
+    "new_testament": "3 John 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 238,
+    "date": "2025-08-26",
+    "old_testament": "Job 39; Job 40",
+    "new_testament": "Jude 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 239,
+    "date": "2025-08-27",
+    "old_testament": "Job 41; Job 42",
+    "new_testament": "Revelation 1",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 240,
+    "date": "2025-08-28",
+    "old_testament": "Isaiah 1; Isaiah 2",
+    "new_testament": "Revelation 2",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 241,
+    "date": "2025-08-29",
+    "old_testament": "Isaiah 3; Isaiah 4",
+    "new_testament": "Revelation 3",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 242,
+    "date": "2025-08-30",
+    "old_testament": "Isaiah 5; Isaiah 6",
+    "new_testament": "Revelation 4",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 243,
+    "date": "2025-08-31",
+    "old_testament": "Isaiah 7; Isaiah 8",
+    "new_testament": "Revelation 5",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 244,
+    "date": "2025-09-01",
+    "old_testament": "Isaiah 9; Isaiah 10",
+    "new_testament": "Revelation 6",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 245,
+    "date": "2025-09-02",
+    "old_testament": "Isaiah 11; Isaiah 12",
+    "new_testament": "Revelation 7",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 246,
+    "date": "2025-09-03",
+    "old_testament": "Isaiah 13; Isaiah 14",
+    "new_testament": "Revelation 8",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 247,
+    "date": "2025-09-04",
+    "old_testament": "Isaiah 15; Isaiah 16",
+    "new_testament": "Revelation 9",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 248,
+    "date": "2025-09-05",
+    "old_testament": "Isaiah 17; Isaiah 18",
+    "new_testament": "Revelation 10",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 249,
+    "date": "2025-09-06",
+    "old_testament": "Isaiah 19; Isaiah 20",
+    "new_testament": "Revelation 11",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 250,
+    "date": "2025-09-07",
+    "old_testament": "Isaiah 21; Isaiah 22",
+    "new_testament": "Revelation 12",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 251,
+    "date": "2025-09-08",
+    "old_testament": "Isaiah 23; Isaiah 24",
+    "new_testament": "Revelation 13",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 252,
+    "date": "2025-09-09",
+    "old_testament": "Isaiah 25; Isaiah 26",
+    "new_testament": "Revelation 14",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 253,
+    "date": "2025-09-10",
+    "old_testament": "Isaiah 27; Isaiah 28",
+    "new_testament": "Revelation 15",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 254,
+    "date": "2025-09-11",
+    "old_testament": "Isaiah 29; Isaiah 30",
+    "new_testament": "Revelation 16",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 255,
+    "date": "2025-09-12",
+    "old_testament": "Isaiah 31; Isaiah 32",
+    "new_testament": "Revelation 17",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 256,
+    "date": "2025-09-13",
+    "old_testament": "Isaiah 33; Isaiah 34",
+    "new_testament": "Revelation 18",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 257,
+    "date": "2025-09-14",
+    "old_testament": "Isaiah 35; Isaiah 36",
+    "new_testament": "Revelation 19",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 258,
+    "date": "2025-09-15",
+    "old_testament": "Isaiah 37; Isaiah 38",
+    "new_testament": "Revelation 20",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 259,
+    "date": "2025-09-16",
+    "old_testament": "Isaiah 39; Isaiah 40",
+    "new_testament": "Revelation 21",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 260,
+    "date": "2025-09-17",
+    "old_testament": "Isaiah 41; Isaiah 42",
+    "new_testament": "Revelation 22",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 261,
+    "date": "2025-09-18",
+    "old_testament": "Isaiah 43; Isaiah 44",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 262,
+    "date": "2025-09-19",
+    "old_testament": "Isaiah 45; Isaiah 46",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 263,
+    "date": "2025-09-20",
+    "old_testament": "Isaiah 47; Isaiah 48",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 264,
+    "date": "2025-09-21",
+    "old_testament": "Isaiah 49; Isaiah 50",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 265,
+    "date": "2025-09-22",
+    "old_testament": "Isaiah 51; Isaiah 52",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 266,
+    "date": "2025-09-23",
+    "old_testament": "Isaiah 53; Isaiah 54",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 267,
+    "date": "2025-09-24",
+    "old_testament": "Isaiah 55; Isaiah 56",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 268,
+    "date": "2025-09-25",
+    "old_testament": "Isaiah 57; Isaiah 58",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 269,
+    "date": "2025-09-26",
+    "old_testament": "Isaiah 59; Isaiah 60",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 270,
+    "date": "2025-09-27",
+    "old_testament": "Isaiah 61; Isaiah 62",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 271,
+    "date": "2025-09-28",
+    "old_testament": "Isaiah 63; Isaiah 64",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 272,
+    "date": "2025-09-29",
+    "old_testament": "Isaiah 65; Isaiah 66",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 273,
+    "date": "2025-09-30",
+    "old_testament": "Jeremiah 1; Jeremiah 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 274,
+    "date": "2025-10-01",
+    "old_testament": "Jeremiah 3; Jeremiah 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 275,
+    "date": "2025-10-02",
+    "old_testament": "Jeremiah 5; Jeremiah 6",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 276,
+    "date": "2025-10-03",
+    "old_testament": "Jeremiah 7; Jeremiah 8",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 277,
+    "date": "2025-10-04",
+    "old_testament": "Jeremiah 9; Jeremiah 10",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 278,
+    "date": "2025-10-05",
+    "old_testament": "Jeremiah 11; Jeremiah 12",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 279,
+    "date": "2025-10-06",
+    "old_testament": "Jeremiah 13; Jeremiah 14",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 280,
+    "date": "2025-10-07",
+    "old_testament": "Jeremiah 15; Jeremiah 16",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 281,
+    "date": "2025-10-08",
+    "old_testament": "Jeremiah 17; Jeremiah 18",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 282,
+    "date": "2025-10-09",
+    "old_testament": "Jeremiah 19; Jeremiah 20",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 283,
+    "date": "2025-10-10",
+    "old_testament": "Jeremiah 21; Jeremiah 22",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 284,
+    "date": "2025-10-11",
+    "old_testament": "Jeremiah 23; Jeremiah 24",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 285,
+    "date": "2025-10-12",
+    "old_testament": "Jeremiah 25; Jeremiah 26",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 286,
+    "date": "2025-10-13",
+    "old_testament": "Jeremiah 27; Jeremiah 28",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 287,
+    "date": "2025-10-14",
+    "old_testament": "Jeremiah 29; Jeremiah 30",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 288,
+    "date": "2025-10-15",
+    "old_testament": "Jeremiah 31; Jeremiah 32",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 289,
+    "date": "2025-10-16",
+    "old_testament": "Jeremiah 33; Jeremiah 34",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 290,
+    "date": "2025-10-17",
+    "old_testament": "Jeremiah 35; Jeremiah 36",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 291,
+    "date": "2025-10-18",
+    "old_testament": "Jeremiah 37; Jeremiah 38",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 292,
+    "date": "2025-10-19",
+    "old_testament": "Jeremiah 39; Jeremiah 40",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 293,
+    "date": "2025-10-20",
+    "old_testament": "Jeremiah 41; Jeremiah 42",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 294,
+    "date": "2025-10-21",
+    "old_testament": "Jeremiah 43; Jeremiah 44",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 295,
+    "date": "2025-10-22",
+    "old_testament": "Jeremiah 45; Jeremiah 46",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 296,
+    "date": "2025-10-23",
+    "old_testament": "Jeremiah 47; Jeremiah 48",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 297,
+    "date": "2025-10-24",
+    "old_testament": "Jeremiah 49; Jeremiah 50",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 298,
+    "date": "2025-10-25",
+    "old_testament": "Jeremiah 51; Jeremiah 52",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 299,
+    "date": "2025-10-26",
+    "old_testament": "Lamentations 1; Lamentations 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 300,
+    "date": "2025-10-27",
+    "old_testament": "Lamentations 3; Lamentations 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 301,
+    "date": "2025-10-28",
+    "old_testament": "Lamentations 5; Ezekiel 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 302,
+    "date": "2025-10-29",
+    "old_testament": "Ezekiel 2; Ezekiel 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 303,
+    "date": "2025-10-30",
+    "old_testament": "Ezekiel 4; Ezekiel 5",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 304,
+    "date": "2025-10-31",
+    "old_testament": "Ezekiel 6; Ezekiel 7",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 305,
+    "date": "2025-11-01",
+    "old_testament": "Ezekiel 8; Ezekiel 9",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 306,
+    "date": "2025-11-02",
+    "old_testament": "Ezekiel 10; Ezekiel 11",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 307,
+    "date": "2025-11-03",
+    "old_testament": "Ezekiel 12; Ezekiel 13",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 308,
+    "date": "2025-11-04",
+    "old_testament": "Ezekiel 14; Ezekiel 15",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 309,
+    "date": "2025-11-05",
+    "old_testament": "Ezekiel 16; Ezekiel 17",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 310,
+    "date": "2025-11-06",
+    "old_testament": "Ezekiel 18; Ezekiel 19",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 311,
+    "date": "2025-11-07",
+    "old_testament": "Ezekiel 20; Ezekiel 21",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 312,
+    "date": "2025-11-08",
+    "old_testament": "Ezekiel 22; Ezekiel 23",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 313,
+    "date": "2025-11-09",
+    "old_testament": "Ezekiel 24; Ezekiel 25",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 314,
+    "date": "2025-11-10",
+    "old_testament": "Ezekiel 26; Ezekiel 27",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 315,
+    "date": "2025-11-11",
+    "old_testament": "Ezekiel 28; Ezekiel 29",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 316,
+    "date": "2025-11-12",
+    "old_testament": "Ezekiel 30; Ezekiel 31",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 317,
+    "date": "2025-11-13",
+    "old_testament": "Ezekiel 32; Ezekiel 33",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 318,
+    "date": "2025-11-14",
+    "old_testament": "Ezekiel 34; Ezekiel 35",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 319,
+    "date": "2025-11-15",
+    "old_testament": "Ezekiel 36; Ezekiel 37",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 320,
+    "date": "2025-11-16",
+    "old_testament": "Ezekiel 38; Ezekiel 39",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 321,
+    "date": "2025-11-17",
+    "old_testament": "Ezekiel 40; Ezekiel 41",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 322,
+    "date": "2025-11-18",
+    "old_testament": "Ezekiel 42; Ezekiel 43",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 323,
+    "date": "2025-11-19",
+    "old_testament": "Ezekiel 44; Ezekiel 45",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 324,
+    "date": "2025-11-20",
+    "old_testament": "Ezekiel 46; Ezekiel 47",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 325,
+    "date": "2025-11-21",
+    "old_testament": "Ezekiel 48; Daniel 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 326,
+    "date": "2025-11-22",
+    "old_testament": "Daniel 2; Daniel 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 327,
+    "date": "2025-11-23",
+    "old_testament": "Daniel 4; Daniel 5",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 328,
+    "date": "2025-11-24",
+    "old_testament": "Daniel 6; Daniel 7",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 329,
+    "date": "2025-11-25",
+    "old_testament": "Daniel 8; Daniel 9",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 330,
+    "date": "2025-11-26",
+    "old_testament": "Daniel 10; Daniel 11",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 331,
+    "date": "2025-11-27",
+    "old_testament": "Daniel 12; Hosea 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 332,
+    "date": "2025-11-28",
+    "old_testament": "Hosea 2; Hosea 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 333,
+    "date": "2025-11-29",
+    "old_testament": "Hosea 4; Hosea 5",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 334,
+    "date": "2025-11-30",
+    "old_testament": "Hosea 6; Hosea 7",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 335,
+    "date": "2025-12-01",
+    "old_testament": "Hosea 8; Hosea 9",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 336,
+    "date": "2025-12-02",
+    "old_testament": "Hosea 10; Hosea 11",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 337,
+    "date": "2025-12-03",
+    "old_testament": "Hosea 12; Hosea 13",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 338,
+    "date": "2025-12-04",
+    "old_testament": "Hosea 14; Joel 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 339,
+    "date": "2025-12-05",
+    "old_testament": "Joel 2; Joel 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 340,
+    "date": "2025-12-06",
+    "old_testament": "Amos 1; Amos 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 341,
+    "date": "2025-12-07",
+    "old_testament": "Amos 3; Amos 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 342,
+    "date": "2025-12-08",
+    "old_testament": "Amos 5; Amos 6",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 343,
+    "date": "2025-12-09",
+    "old_testament": "Amos 7; Amos 8",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 344,
+    "date": "2025-12-10",
+    "old_testament": "Amos 9; Obadiah 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 345,
+    "date": "2025-12-11",
+    "old_testament": "Jonah 1; Jonah 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 346,
+    "date": "2025-12-12",
+    "old_testament": "Jonah 3; Jonah 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 347,
+    "date": "2025-12-13",
+    "old_testament": "Micah 1; Micah 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 348,
+    "date": "2025-12-14",
+    "old_testament": "Micah 3; Micah 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 349,
+    "date": "2025-12-15",
+    "old_testament": "Micah 5; Micah 6",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 350,
+    "date": "2025-12-16",
+    "old_testament": "Micah 7; Nahum 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 351,
+    "date": "2025-12-17",
+    "old_testament": "Nahum 2; Nahum 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 352,
+    "date": "2025-12-18",
+    "old_testament": "Habakkuk 1; Habakkuk 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 353,
+    "date": "2025-12-19",
+    "old_testament": "Habakkuk 3; Zephaniah 1",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 354,
+    "date": "2025-12-20",
+    "old_testament": "Zephaniah 2; Zephaniah 3",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 355,
+    "date": "2025-12-21",
+    "old_testament": "Haggai 1; Haggai 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 356,
+    "date": "2025-12-22",
+    "old_testament": "Zechariah 1; Zechariah 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 357,
+    "date": "2025-12-23",
+    "old_testament": "Zechariah 3; Zechariah 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 358,
+    "date": "2025-12-24",
+    "old_testament": "Zechariah 5; Zechariah 6",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 359,
+    "date": "2025-12-25",
+    "old_testament": "Zechariah 7; Zechariah 8",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 360,
+    "date": "2025-12-26",
+    "old_testament": "Zechariah 9; Zechariah 10",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 361,
+    "date": "2025-12-27",
+    "old_testament": "Zechariah 11; Zechariah 12",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 362,
+    "date": "2025-12-28",
+    "old_testament": "Zechariah 13; Zechariah 14",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 363,
+    "date": "2025-12-29",
+    "old_testament": "Malachi 1; Malachi 2",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 364,
+    "date": "2025-12-30",
+    "old_testament": "Malachi 3; Malachi 4",
+    "new_testament": "",
+    "psalm_or_gospel": ""
+  },
+  {
+    "day": 365,
+    "date": "2025-12-31",
+    "old_testament": "2 Chronicles 6; 2 Chronicles 7",
+    "new_testament": "1 Thessalonians 5",
+    "psalm_or_gospel": "Ecclesiastes 6"
+  }
+]
