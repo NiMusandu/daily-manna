@@ -156,3 +156,14 @@ async def handle_incoming_message(data):
 
         return
 
+
+elif incoming_text.upper() == "START":
+    # Check if user already exists
+    existing = supabase.table("users").select("*").eq("phone", sender).execute()
+    if not existing.data:
+        # Register new user
+        supabase.table("users").insert({"phone": sender}).execute()
+        return "👋 Welcome to Daily Manna!\n\nPlease choose your preferred Bible version:\nKJV | NIV | ESV"
+    else:
+        return "👋 You're already registered. Type READ to get today's Bible passage."
+
