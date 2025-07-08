@@ -2,23 +2,22 @@
 
 import os
 import requests
-from config import ULTRA_INSTANCE, ULTRA_TOKEN
 
-def send_whatsapp_message(to, body):
-    url = f"https://api.ultramsg.com/instance{ULTRA_INSTANCE}/messages/chat"
+ULTRA_TOKEN = os.getenv("ULTRA_TOKEN")
+ULTRA_INSTANCE = os.getenv("ULTRA_INSTANCE")
+
+def send_whatsapp_message(to, message):
+    url = f"https://api.ultramsg.com/{ULTRA_INSTANCE}/messages/chat"
     payload = {
         "token": ULTRA_TOKEN,
         "to": to,
-        "body": body
+        "body": message
     }
-
-    print("🔧 Sending WhatsApp message...")
-    print("📍 URL:", url)
-    print("📦 Payload:", payload)
-
-    response = requests.post(url, data=payload)
-    print("📨 HTTP Status:", response.status_code)
-    print("🧾 Raw Response:", response.text)
+    try:
+        response = requests.post(url, data=payload)
+        print(f"✅ Message sent to {to}: {message}")
+    except Exception as e:
+        print(f"❌ Failed to send message: {e}")
 
 
 import requests
