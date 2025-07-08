@@ -2,7 +2,7 @@ from config import ULTRA_INSTANCE, ULTRA_TOKEN
 
 import json
 from datetime import datetime
-from utils.whatsapp import send_whatsapp_message
+from whatsapp import send_whatsapp_message
 from apscheduler.schedulers.background import BackgroundScheduler
 
 # Load reading plan
