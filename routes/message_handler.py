@@ -1,6 +1,34 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+# routes/message_handler.py
+from supabase import create_client
+from utils.supabase_config import supabase_url, supabase_key
+from utils.whatsapp import send_whatsapp_message
+
+supabase = create_client(supabase_url, supabase_key)
+
+async def handle_incoming_message(data):
+    message = data['message']['body'].strip().upper()
+    phone = data['message']['from']
+
+    if message == "START":
+        # Check if user exists
+        response = supabase.table("users").select("*").eq("phone", phone).execute()
+        if not response.data:
+            # Register new user
+            supabase.table("users").insert({
+                "phone": phone,
+                "start_date": "now()",  # Or calculate current date
+                "reminder_time": None,
+                "bible_version": None,
+                "name": None,
+            }).execute()
+
+        # Send onboarding message
+        await send_whatsapp_message(phone, 
+            "🙏 Welcome to *Daily Manna*! Let's get you started.\n\n💬 What's your name?")
+
 
 from supabase import create_client
 from datetime import datetime

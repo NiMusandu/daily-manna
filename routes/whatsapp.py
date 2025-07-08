@@ -1,3 +1,16 @@
+# routes/whatsapp.py
+from fastapi import APIRouter, Request
+from routes.message_handler import handle_incoming_message
+
+router = APIRouter()
+
+@router.post("/webhook")
+async def whatsapp_webhook(request: Request):
+    data = await request.json()
+    await handle_incoming_message(data)
+    return {"status": "ok"}
+
+
 from fastapi import APIRouter, Request
 from routes.message_handler import handle_incoming_message
 
