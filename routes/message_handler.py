@@ -77,3 +77,35 @@ async def handle_incoming_message(payload):
 
     # === Future Commands (READ, STATS, REFLECT, etc.) ===
     # Add your existing logic here...
+
+
+# routes/message_handler.py (continued)
+
+async def handle_incoming_message(data):
+    message = data['message']['body'].strip()
+    phone = data['message']['from']
+
+    user_response = supabase.table("users").select("*").eq("phone", phone).execute()
+    user = user_response.data[0] if user_response.data else None
+
+    if message.upper() == "START":
+        if not user:
+            supabase.table("users").insert({
+                "phone": phone,
+                "start_date": "now()",  # optional
+                "reminder_time": None,
+                "bible_version": None,
+                "name": None,
+            }).execute()
+
+        await send_whatsapp_message(phone, 
+            "🙏 Welcome to *Daily Manna*! Let's get you started.\n\n💬 What's your name?")
+        return
+
+    # Check if user has no name => treat message as name
+    if user and user["name"] is None:
+        supabase.table("users").update({"name": message}).eq("phone", phone).execute()
+        await send_whatsapp_message(phone,
+            f"✅ Thanks {message}!\n📖 What version of the Bible would you like to use?\nOptions: *KJV*, *NIV*, *ESV*")
+        return
+
