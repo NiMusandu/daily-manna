@@ -121,3 +121,38 @@ async def handle_incoming_message(data):
                 "❌ Invalid Bible version. Please choose one of: *KJV*, *NIV*, *ESV*")
         return
 
+
+    # Check if user has no reminder_time => treat message as time
+    if user and user["reminder_time"] is None:
+        time_input = message.strip().upper().replace(" ", "")
+        
+        # Accept formats like 06:30AM, 06:30 AM, 18:00
+        import re
+        match_12hr = re.match(r"^(\d{1,2}):(\d{2})(AM|PM)$", time_input)
+        match_24hr = re.match(r"^(\d{1,2}):(\d{2})$", time_input)
+
+        if match_12hr:
+            hr, minute, ampm = int(match_12hr[1]), int(match_12hr[2]), match_12hr[3]
+            if ampm == "PM" and hr != 12:
+                hr += 12
+            if ampm == "AM" and hr == 12:
+                hr = 0
+            reminder_time = f"{hr:02d}:{minute:02d}"
+        elif match_24hr:
+            hr, minute = int(match_24hr[1]), int(match_24hr[2])
+            if hr > 23 or minute > 59:
+                await send_whatsapp_message(phone, "❌ Invalid time. Please send in HH:MM format like *06:30 AM* or *20:00*")
+                return
+            reminder_time = f"{hr:02d}:{minute:02d}"
+        else:
+            await send_whatsapp_message(phone, "❌ Invalid time. Please send in HH:MM format like *06:30 AM* or *20:00*")
+            return
+
+        # Save to Supabase
+        supabase.table("users").update({"reminder_time": reminder_time}).eq("phone", phone).execute()
+
+        await send_whatsapp_message(phone,
+            f"✅ Awesome! You’ll get your daily reading at *{reminder_time}*.\n\nType *READ* to get today’s passage anytime.")
+
+        return
+
