@@ -1,36 +1,35 @@
 from config import ULTRA_INSTANCE, ULTRA_TOKEN
 
-import json
+import asyncio
 from datetime import datetime
-from whatsapp import send_whatsapp_message
-from apscheduler.schedulers.background import BackgroundScheduler
+from supabase import create_client
+from utils.whatsapp import send_whatsapp_message
+import os
 
-# Load reading plan
-with open("reading_plan.json", "r", encoding="utf-8") as f:
-    plan = json.load(f)
+# Load environment variables
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
 
-# Get today's Bible reading
-def get_reading_for_day(day: int) -> str:
-    if 1 <= day <= 365:
-        item = plan[day - 1]
-        return f"{item['old_testament']}; {item['new_testament']}; {item['psalm_or_gospel']}"
-    return "John 1"
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-def generate_esv_link(ref: str) -> str:
-    formatted = ref.replace("; ", ",").replace(" ", "+")
-    return f"https://www.esv.org/{formatted}/"
+async def send_daily_readings():
+    while True:
+        now = datetime.now().strftime("%H:%M")
+        
+        # Fetch users with active reminders
+        result = supabase.table("users").select("*").eq("reminder_active", True).execute()
+        users = result.data if result.data else []
 
-# Actual send function
-def send_daily_reading(to_number: str):
-    day_of_year = datetime.now().timetuple().tm_yday
-    reference = get_reading_for_day(day_of_year)
-    link = generate_esv_link(reference)
-    message = f"📖 *Day {day_of_year} Bible Reading*\n\n{reference}\n\n🔗 Read here: {link}\n\nReply *READ* once done."
-    send_whatsapp_message(to_number, message)
+        for user in users:
+            if user.get("reminder_time") == now:
+                phone = user["phone"]
+                message = "📖 Good morning! Here's your Daily Manna reading for today. Type *READ* to view it."
 
-# Optional scheduler start (only if you're auto-running daily)
-def start():
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(lambda: send_daily_reading("254721420119"), 'cron', hour=6, minute=0)
-    scheduler.start()
-    print("✅ Daily Bible reading scheduler started (6:00 AM).")
+                print(f"📤 Sending reminder to {phone} at {now}")
+                send_whatsapp_message(phone, message)
+
+        await asyncio.sleep(60)  # Check every 60 seconds
+
+if __name__ == "__main__":
+    print("✅ Daily Reminder Scheduler started.")
+    asyncio.run(send_daily_readings())
