@@ -109,3 +109,15 @@ async def handle_incoming_message(data):
             f"✅ Thanks {message}!\n📖 What version of the Bible would you like to use?\nOptions: *KJV*, *NIV*, *ESV*")
         return
 
+    # Check if user has no bible_version => treat message as version
+    if user and user["bible_version"] is None:
+        version = message.upper()
+        if version in ["KJV", "NIV", "ESV"]:
+            supabase.table("users").update({"bible_version": version}).eq("phone", phone).execute()
+            await send_whatsapp_message(phone,
+                f"📖 Great! You'll be using the *{version}* Bible.\n\n⏰ What time should I send your daily reading?\nFormat: *06:30 AM* or *20:00*")
+        else:
+            await send_whatsapp_message(phone,
+                "❌ Invalid Bible version. Please choose one of: *KJV*, *NIV*, *ESV*")
+        return
+
