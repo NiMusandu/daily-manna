@@ -1,91 +1,47 @@
-from datetime import datetime, timedelta
-from utils.supabase_client import supabase
-from utils.ultramsg import send_whatsapp_message
+from supabase import create_client
+from datetime import datetime
+import os
 
-# Constants
-TOTAL_DAYS = 365
+# Supabase setup
+url = os.getenv("SUPABASE_URL")
+key = os.getenv("SUPABASE_KEY")
+supabase = create_client(url, key)
 
 async def handle_incoming_message(payload):
-    data = payload.get("data")
-    if not data:
-        raise ValueError("Missing 'data' in payload")
+    user_number = payload['data']['from'].split('@')[0]  # Extract phone number
+    message = payload['data']['body'].strip().upper()  # Normalize message
 
-    user_number = data.get("from", "").split("@")[0]
-    message = data.get("body", "").strip()
-    command = message.upper()
+    # === START Command ===
+    if message == "START":
+        # Check if user exists
+        existing = supabase.table("users").select("user_id").eq("user_id", user_number).execute()
 
-    print(f"📩 Incoming from {user_number}: {message}")
-
-    if command.startswith("READ"):
-        # Fetch progress or create new
-        response = supabase.table("progress").select("*").eq("user_id", user_number).execute()
-        user_data = response.data[0] if response.data else None
-
-        today = datetime.utcnow().date()
-        yesterday = today - timedelta(days=1)
-
-        if user_data:
-            last_read_date = datetime.strptime(user_data["last_read_date"], "%Y-%m-%d").date()
-            streak = user_data.get("streak", 0)
-
-            if last_read_date == yesterday:
-                streak += 1
-            elif last_read_date == today:
-                # Already marked today — no increment
-                return "✅ You've already recorded today's reading. Keep it up!"
-            else:
-                streak = 1  # reset streak
-
-            days_completed = user_data.get("days_completed", 0) + 1
-
-            supabase.table("progress").update({
-                "days_completed": days_completed,
-                "last_read_date": today.isoformat(),
-                "streak": streak
-            }).eq("user_id", user_number).execute()
-
-        else:
-            # First time reader
-            supabase.table("progress").insert({
+        if not existing.data:
+            # Create new user
+            supabase.table("users").insert({
                 "user_id": user_number,
-                "days_completed": 1,
-                "last_read_date": today.isoformat(),
-                "streak": 1
+                "joined_at": datetime.utcnow().isoformat(),
+                "preferred_version": "KJV",
+                "reminder_time": None
             }).execute()
 
-        return "📖 Reading recorded! God bless your consistency."
+            welcome = (
+                f"👋 *Welcome to Daily Manna!*\n\n"
+                "You're now registered for the Daily Bible Reading journey. 📖✨\n\n"
+                "📌 To get started:\n"
+                "1. Choose your Bible version (e.g., KJV, NIV, ESV)\n"
+                "2. Set a daily reminder time (e.g., 6:30AM)\n\n"
+                "Reply with your preferred *Bible version* to continue."
+            )
+        else:
+            welcome = (
+                "👋 Welcome back!\nYou're already registered for Daily Manna.\n"
+                "Reply READ to get today's reading or HELP for available commands."
+            )
 
-    elif command == "STATS":
-        response = supabase.table("progress").select("*").eq("user_id", user_number).execute()
-        if not response.data:
-            return "ℹ️ You haven’t started your reading journey. Send 'READ' to begin!"
+        from utils.whatsapp import send_whatsapp_message
+        await send_whatsapp_message(user_number, welcome)
+        return {"status": "onboarded"}
 
-        user = response.data[0]
-        completed = user.get("days_completed", 0)
-        streak = user.get("streak", 0)
-        percent = round((completed / TOTAL_DAYS) * 100, 1)
-
-        return (
-            "📊 *Your Reading Stats*\n\n"
-            f"✅ Days Completed: {completed}\n"
-            f"🔥 Streak: {streak} days\n"
-            f"📈 Completion: {percent}%\n\n"
-            "🕊️ Keep pressing on!"
-        )
-
-    elif command.startswith("REFLECT"):
-        reflection_text = message[7:].strip()
-        supabase.table("reflections").insert({
-            "user_id": user_number,
-            "reflection": reflection_text
-        }).execute()
-        return "🙏 Reflection saved. May God bless your meditation."
-
-    else:
-        return (
-            "🤖 Unknown command.\n\n"
-            "Send:\n"
-            "- READ to log your Bible reading\n"
-            "- REFLECT <message> to submit a reflection\n"
-            "- STATS to view your progress"
-        )
+    # === Future Commands (READ, STATS, REFLECT, etc.) ===
+    # Add your existing logic here...

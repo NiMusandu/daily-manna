@@ -1,18 +1,15 @@
 import os
-import requests
+import httpx
 
 ULTRA_TOKEN = os.getenv("ULTRA_TOKEN")
 ULTRA_INSTANCE = os.getenv("ULTRA_INSTANCE")
 
-def send_whatsapp_message(to, message):
+async def send_whatsapp_message(phone_number, message):
     url = f"https://api.ultramsg.com/{ULTRA_INSTANCE}/messages/chat"
     payload = {
         "token": ULTRA_TOKEN,
-        "to": to,
+        "to": phone_number,
         "body": message
     }
-    try:
-        response = requests.post(url, data=payload)
-        print(f"✅ Sent to {to}: {message}")
-    except Exception as e:
-        print(f"❌ Error: {e}")
+    async with httpx.AsyncClient() as client:
+        await client.post(url, data=payload)
