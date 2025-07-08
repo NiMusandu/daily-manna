@@ -38,3 +38,27 @@ async def handle_incoming_message(payload):
 
     else:
         return "🤖 Unknown command. Send READ, REFLECT <your message>, or STATS."
+
+import re
+
+elif message_text.startswith("REMIND"):
+    match = re.search(r"REMIND\s+(\d{1,2}):(\d{2})", message_text)
+    if match:
+        hour, minute = match.groups()
+        reminder_time = f"{int(hour):02d}:{minute}"
+
+        supabase.table("users").update({
+            "reminder_time": reminder_time,
+            "reminder_active": True
+        }).eq("phone", user_number).execute()
+
+        return f"✅ Reminder set for *{reminder_time}* daily!"
+    else:
+        return "❌ Invalid format. Use: REMIND 6:30AM"
+
+elif message_text == "STOP REMINDER":
+    supabase.table("users").update({
+        "reminder_active": False
+    }).eq("phone", user_number).execute()
+
+    return "🛑 Daily reminders turned *off*."
