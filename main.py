@@ -25,3 +25,14 @@ def run_scheduler():
 async def startup_event():
     print("✅ Daily Bible reading scheduler started (6:00 AM).")
     threading.Thread(target=run_scheduler, daemon=True).start()
+
+from fastapi.responses import HTMLResponse
+
+@app.get("/", response_class=HTMLResponse)
+def home():
+    return """
+    <h1>Welcome to Daily Manna 📖</h1>
+    <p>This is the backend API for our WhatsApp Bible reading agent.</p>
+    <p>Visit <a href='https://wa.me/254721420119?text=START'>our WhatsApp bot</a> to begin.</p>
+    """
+
