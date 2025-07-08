@@ -1,6 +1,11 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+from routes.whatsapp import router as whatsapp_router
+
+app.include_router(whatsapp_router, prefix="/webhook")
+
+
 # main.py
 from fastapi import FastAPI
 from routes.whatsapp import router as whatsapp_router
