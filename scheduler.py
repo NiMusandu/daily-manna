@@ -1,35 +1,34 @@
 from config import ULTRA_INSTANCE, ULTRA_TOKEN
 
 import asyncio
-from datetime import datetime
-from supabase import create_client
+import datetime
 from utils.whatsapp import send_whatsapp_message
+from utils.bible import get_daily_reading  # Assuming this returns today's reading
+from supabase import create_client
 import os
 
-# Load environment variables
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+# Supabase client
+supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
 async def send_daily_readings():
+    print("✅ Daily Reminder Scheduler started.")
     while True:
-        now = datetime.now().strftime("%H:%M")
-        
-        # Fetch users with active reminders
-        result = supabase.table("users").select("*").eq("reminder_active", True).execute()
-        users = result.data if result.data else []
+        # Get current time in HH:MM format
+        now = datetime.datetime.now()
+        current_time = now.strftime("%H:%M")
 
-        for user in users:
-            if user.get("reminder_time") == now:
-                phone = user["phone"]
-                message = "📖 Good morning! Here's your Daily Manna reading for today. Type *READ* to view it."
+        # Get users with reminder_time == current_time
+        response = supabase.table("users").select("*").eq("reminder_time", current_time).execute()
+        users_to_notify = response.data or []
 
-                print(f"📤 Sending reminder to {phone} at {now}")
-                send_whatsapp_message(phone, message)
+        for user in users_to_notify:
+            user_id = user["user_id"]
+            bible_version = user.get("bible_version", "KJV")  # fallback to KJV
+            reading = get_daily_reading(bible_version)
+
+            # Send reading
+            await send_whatsapp_message(user_id, f"📖 *Your Daily Manna ({bible_version})*\n\n{reading}")
+
+            print(f"✅ Sent reading to {user_id} at {current_time}")
 
         await asyncio.sleep(60)  # Check every 60 seconds
-
-if __name__ == "__main__":
-    print("✅ Daily Reminder Scheduler started.")
-    asyncio.run(send_daily_readings())

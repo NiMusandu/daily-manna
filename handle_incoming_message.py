@@ -62,3 +62,22 @@ elif message_text == "STOP REMINDER":
     }).eq("phone", user_number).execute()
 
     return "🛑 Daily reminders turned *off*."
+
+
+    # === Bible Version Selection ===
+    supported_versions = ["KJV", "NIV", "ESV"]
+    if message in supported_versions:
+        # Update preferred_version
+        supabase.table("users").update({
+            "preferred_version": message
+        }).eq("user_id", user_number).execute()
+
+        confirmation = f"✅ Bible version set to *{message}*.\n\n⏰ Now, reply with your preferred reminder time (e.g., 6:30AM)."
+        await send_whatsapp_message(user_number, confirmation)
+        return {"status": "version_set"}
+
+    # === Catch unsupported single-word replies ===
+    if len(message.split()) == 1 and message.isalpha():
+        fallback = "❗ I didn't recognize that Bible version.\nPlease reply with one of: *KJV*, *NIV*, or *ESV*."
+        await send_whatsapp_message(user_number, fallback)
+        return {"status": "invalid_version"}
