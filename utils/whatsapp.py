@@ -1,5 +1,3 @@
-# utils/whatsapp.py
-
 import os
 import requests
 
@@ -15,21 +13,6 @@ def send_whatsapp_message(to, message):
     }
     try:
         response = requests.post(url, data=payload)
-        print(f"✅ Message sent to {to}: {message}")
+        print(f"✅ Sent to {to}: {message}")
     except Exception as e:
-        print(f"❌ Failed to send message: {e}")
-
-
-import requests
-import os
-
-def send_whatsapp_message(phone: str, message: str):
-    url = f"https://api.ultramsg.com/instance{os.getenv('ULTRA_INSTANCE')}/messages/chat"
-    payload = {
-        "token": os.getenv("ULTRA_TOKEN"),
-        "to": phone,
-        "body": message
-    }
-    response = requests.post(url, data=payload)
-    print(f"📤 Sent WhatsApp message to {phone} → Status: {response.status_code}")
-    return response.json()
+        print(f"❌ Error: {e}")
