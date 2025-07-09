@@ -3,7 +3,6 @@ import os
 
 ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
 ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
-
 ULTRAMSG_API_URL = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
 
 async def send_whatsapp_message(to_number: str, message: str):

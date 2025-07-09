@@ -2,7 +2,7 @@ from fastapi.responses import JSONResponse
 from supabase import create_client
 import os
 from datetime import datetime
-from utils.send_message import send_whatsapp_message
+from utils.whatsapp import send_whatsapp_message
 
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
