@@ -42,4 +42,3 @@ async def startup_event():
     print("✅ Daily Manna backend is live.")
     # Uncomment if running the reminder scheduler from here
     # threading.Thread(target=run_scheduler, daemon=True).start()
-sssss
