@@ -113,7 +113,9 @@ async def handle_stats(phone: str):
 # ⏰ REMIND command
 async def handle_remind(phone: str, message: str):
     # Match "REMIND HH:MM" exactly
-    match = re.search(r"REMIND\s+(\d{2}):(\d{2})", message.upper())
+    match = re.search(r"REMIND\s+(\d{1,2}):(\d{2})", message.upper())
+        hour, minute = match.groups()
+	time_str = f"{int(hour):02d}:{minute}"
     if not match:
         await send_whatsapp_message(phone,
             "⏰ Please use the correct format:\n\n*REMIND HH:MM*\nFor example:\nREMIND 07:30"
