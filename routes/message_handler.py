@@ -24,7 +24,7 @@ async def handle_incoming_message(payload: dict):
     elif message_body == "READ":
         return await handle_read(phone)
     
-    elif message_body == "STATS":
+    elif message_body in ["STAT", "STATS"]:
         return await handle_stats(phone)
 
     # Unknown command fallback
