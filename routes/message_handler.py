@@ -55,7 +55,7 @@ async def handle_incoming_message(payload):
     # === If user exists, continue onboarding
     user = supabase.table("users").select("*").eq("user_id", user_number).execute().data
     if not user:
-        print(⚠️ Message received from unregistered user. Ask them to send START.")
+        print("⚠️ Message received from unregistered user. Ask them to send START.")
         await send_whatsapp_message(user_number, "Please type *START* to begin.")
         return
 
