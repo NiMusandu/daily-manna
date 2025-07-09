@@ -35,6 +35,13 @@ async def handle_incoming_message(payload: dict):
     elif message_body in ["STOP REMINDER", "STOPREMINDER"]:
         return await handle_stop_reminder(phone)
 
+    elif message_body.startswith("REFLECT"):
+        return await handle_reflect(phone, message_body)
+
+    elif message_body == "MY REFLECTIONS":
+       return await handle_my_reflections(phone)
+
+
     # Fallback: unknown command
     await send_whatsapp_message(phone, "🤖 Unknown command. Try *START*, *READ*, *REMIND HH:MM*, *STATS* or *HELP*.")
     return JSONResponse(content={"message": f"Unknown command '{message_body}'"}, status_code=200)
@@ -137,3 +144,55 @@ async def handle_stop_reminder(phone: str):
     supabase.table("users").update({"reminder_time": None}).eq("phone", phone).execute()
     await send_whatsapp_message(phone, "🚫 Reminder stopped. You won’t receive daily alerts.")
     return JSONResponse(content={"message": "Reminder stopped"}, status_code=200)
+
+
+# ✍️ handle_reflect function
+async def handle_reflect(phone: str, message: str):
+    reflection = message[7:].strip()  # Remove "REFLECT" and get the message
+
+    if not reflection:
+        await send_whatsapp_message(phone, "✍️ Please provide your reflection message.\nExample:\n*REFLECT God spoke to me today through...*")
+        return JSONResponse(content={"message": "Empty reflection"}, status_code=200)
+
+    # Get user's reading day
+    user = supabase.table("users").select("start_date").eq("phone", phone).execute()
+    if not user.data:
+        await send_whatsapp_message(phone, "⚠️ Please send *START* first.")
+        return JSONResponse(content={"error": "Not registered"}, status_code=400)
+
+    start_date = datetime.fromisoformat(user.data[0]["start_date"])
+    today = datetime.utcnow()
+    day_number = (today.date() - start_date.date()).days + 1
+
+    # Save reflection
+    supabase.table("reflections").insert({
+        "phone": phone,
+        "message": reflection,
+        "day_number": day_number,
+        "timestamp": today.isoformat()
+    }).execute()
+
+    await send_whatsapp_message(phone, "✅ Reflection saved! You can view past ones with *MY REFLECTIONS*.")
+    return JSONResponse(content={"message": "Reflection saved"}, status_code=200)
+
+
+# 📚 handle_my_reflections function
+async def handle_my_reflections(phone: str):
+    result = supabase.table("reflections").select("*").eq("phone", phone).order("timestamp", desc=True).limit(5).execute()
+
+    if not result.data:
+        await send_whatsapp_message(phone, "📝 You haven't submitted any reflections yet. Try:\n*REFLECT Today’s verse reminded me...*")
+        return JSONResponse(content={"message": "No reflections"}, status_code=200)
+
+    messages = ["📝 *Your Last 5 Reflections:*"]
+    for item in result.data:
+        date = item["timestamp"].split("T")[0]
+        day = item.get("day_number", "?")
+        snippet = item["message"][:80] + "..." if len(item["message"]) > 80 else item["message"]
+        messages.append(f"📅 Day {day} ({date}):\n_{snippet}_\n")
+
+    await send_whatsapp_message(phone, "\n".join(messages))
+    return JSONResponse(content={"message": "Reflections sent"}, status_code=200)
+
+
+
