@@ -8,9 +8,10 @@ import os
 from utils.whatsapp import send_whatsapp_message
 from utils.reading_plan import get_reading_for_day
 
-# Initialize Supabase
+# Initialize Supabase client
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
+# Main message dispatcher
 async def handle_incoming_message(payload: dict):
     data = payload.get("data", {})
     message_body = data.get("body", "").strip().upper()
@@ -23,8 +24,14 @@ async def handle_incoming_message(payload: dict):
     elif message_body == "READ":
         return await handle_read(phone)
     
+    elif message_body == "STATS":
+        return await handle_stats(phone)
+
+    # Unknown command fallback
     return JSONResponse(content={"message": f"Command '{message_body}' received."}, status_code=200)
 
+
+# START command handler
 async def handle_start(phone: str, name: str):
     existing = supabase.table("users").select("id").eq("phone", phone).execute()
     if existing.data:
@@ -47,6 +54,8 @@ async def handle_start(phone: str, name: str):
 
     return JSONResponse(content={"message": "START command handled."}, status_code=200)
 
+
+# READ command handler
 async def handle_read(phone: str):
     result = supabase.table("users").select("start_date").eq("phone", phone).execute()
     if not result.data:
@@ -60,7 +69,7 @@ async def handle_read(phone: str):
 
     reading = get_reading_for_day(day_number)
 
-    # Optional: prevent duplicate logging
+    # Log the reading
     supabase.table("progress").insert({
         "phone": phone,
         "day": day_number,
@@ -70,10 +79,9 @@ async def handle_read(phone: str):
     await send_whatsapp_message(phone, reading)
     return JSONResponse(content={"message": "Reading sent."}, status_code=200)
 
-    elif message_body == "STATS":
-        return await handle_stats(phone)
+
+# STATS command handler
 async def handle_stats(phone: str):
-    # Fetch all reading logs for this user
     result = supabase.table("progress").select("*").eq("phone", phone).execute()
 
     if not result.data:
