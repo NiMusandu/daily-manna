@@ -32,7 +32,7 @@ async def handle_incoming_message(payload: dict):
     elif message_body.startswith("REMIND"):
         return await handle_remind(phone, message_body)
 
-    elif message_body == "STOP REMINDER":
+    elif message_body in ["STOP REMINDER", "STOPREMINDER"]:
         return await handle_stop_reminder(phone)
 
     # Fallback: unknown command
@@ -112,18 +112,24 @@ async def handle_stats(phone: str):
 
 # ⏰ REMIND command
 async def handle_remind(phone: str, message: str):
+    # Match "REMIND HH:MM" exactly
     match = re.search(r"REMIND\s+(\d{2}):(\d{2})", message.upper())
     if not match:
-        await send_whatsapp_message(phone, "⏰ Please use the format:\n*REMIND HH:MM*\nExample: REMIND 07:00")
-        return JSONResponse(content={"message": "Invalid format"}, status_code=400)
+        await send_whatsapp_message(phone,
+            "⏰ Please use the correct format:\n\n*REMIND HH:MM*\nFor example:\nREMIND 07:30"
+        )
+        return JSONResponse(content={"message": "Invalid REMIND format"}, status_code=200)
 
     hour, minute = match.groups()
     time_str = f"{hour}:{minute}"
 
     supabase.table("users").update({"reminder_time": time_str}).eq("phone", phone).execute()
 
-    await send_whatsapp_message(phone, f"✅ Got it! You'll be reminded every day at *{time_str}*.")
-    return JSONResponse(content={"message": "Reminder set"}, status_code=200)
+    await send_whatsapp_message(
+        phone,
+        f"✅ Great! We'll remind you every day at *{time_str} UTC*.\n\nTo stop, type *STOP REMINDER*."
+    )
+    return JSONResponse(content={"message": "Reminder time set"}, status_code=200)
 
 
 # 🛑 STOP REMINDER
