@@ -1,33 +1,17 @@
 # routes/whatsapp.py
+
 from fastapi import APIRouter, Request
 from routes.message_handler import handle_incoming_message
 
 router = APIRouter()
 
-@router.post("/webhook")
-async def whatsapp_webhook(request: Request):
-    data = await request.json()
-    await handle_incoming_message(data)
-    return {"status": "ok"}
-
-
-from fastapi import APIRouter, Request
-from routes.message_handler import handle_incoming_message
-
-router = APIRouter()  # ✅ Define the router here
-
-@router.post("/whatsapp")
+@router.post("/")  # This handles POST to /webhook if router prefix is /webhook
 async def whatsapp_webhook(request: Request):
     try:
-        data = await request.json()
-        print("📥 RAW JSON DATA:", data)
+        payload = await request.json()
+        print("📥 Incoming WhatsApp Payload:", payload)
+        result = await handle_incoming_message(payload)
+        return {"status": "ok", "reply": result.get("reply", "handled")} if result else {"status": "ok"}
     except Exception as e:
-        print("❌ Failed to parse JSON:", e)
-        return {"status": "error", "message": "JSON could not be parsed"}
-
-    result = await handle_incoming_message(data)
-
-    if result and "reply" in result:
-        return {"status": "ok", "reply": result["reply"]}
-    
-    return {"status": "ok"}
+        print("❌ Failed to process WhatsApp webhook:", e)
+        return {"status": "error", "detail": str(e)}
