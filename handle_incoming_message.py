@@ -13,6 +13,11 @@ async def handle_incoming_message(payload):
 
     print(f"📩 Incoming from {user_number}: {message}")
 
+    if text.upper() == "START":
+       response = await register_user(payload)
+       return await send_whatsapp_message(user_id, response["message"])
+
+
     if command.startswith("READ"):
         supabase.table("progress").upsert({
             "user_id": user_number,
