@@ -81,3 +81,39 @@ elif message_text == "STOP REMINDER":
         fallback = "❗ I didn't recognize that Bible version.\nPlease reply with one of: *KJV*, *NIV*, or *ESV*."
         await send_whatsapp_message(user_number, fallback)
         return {"status": "invalid_version"}
+
+
+
+import re
+
+# === Reminder Time Format (e.g., 6:30AM or 18:00) ===
+time_pattern = re.compile(r"^([0-1]?[0-9]|2[0-3]):([0-5][0-9])\s?(AM|PM)?$", re.IGNORECASE)
+
+match = time_pattern.match(message)
+if match:
+    hour = int(match.group(1))
+    minute = int(match.group(2))
+    meridian = match.group(3)
+
+    # Convert to 24hr format if AM/PM is given
+    if meridian:
+        meridian = meridian.upper()
+        if meridian == "PM" and hour != 12:
+            hour += 12
+        elif meridian == "AM" and hour == 12:
+            hour = 0
+
+    reminder_time = f"{hour:02d}:{minute:02d}"  # 24hr format: HH:MM
+
+    # Save to Supabase
+    supabase.table("users").update({
+        "reminder_time": reminder_time
+    }).eq("user_id", user_number).execute()
+
+    await send_whatsapp_message(user_number, f"⏰ Reminder time set to *{reminder_time}*.\n\n📖 You’ll now receive your Daily Manna automatically at this time.")
+    return {"status": "reminder_set"}
+
+
+# === Catch all fallback (optional) ===
+await send_whatsapp_message(user_number, "❓ I didn’t understand that.\nPlease reply with:\n\n- A Bible version (*KJV*, *NIV*, *ESV*)\n- Or a time like *6:30AM* or *18:00*")
+return {"status": "fallback"}

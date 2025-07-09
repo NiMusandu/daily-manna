@@ -57,3 +57,5 @@ def home():
     <p>Visit <a href='https://wa.me/254721420119?text=START'>our WhatsApp bot</a> to begin.</p>
     """
 
+from routes.join import router as join_router
+app.include_router(join_router)
