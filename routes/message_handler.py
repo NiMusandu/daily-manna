@@ -6,7 +6,7 @@ router = APIRouter()
 
 async def handle_incoming_message(payload):
     # your logic here
-    return {"message": "Handled"}
+    return {"message": "START command received"}
 
 @router.post("/")  # This will be mounted at /webhook if you set prefix="/webhook"
 async def whatsapp_webhook(request: Request):

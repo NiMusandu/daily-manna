@@ -8,7 +8,7 @@ router = APIRouter()
 @router.post("/")  # This handles POST to /webhook if router prefix is /webhook
 async def whatsapp_webhook(request: Request):
     try:
-        payload = await request.json()
+        response = await handle_incoming_message(payload)
         print("📥 Incoming WhatsApp Payload:", payload)
         result = await handle_incoming_message(payload)
         return {"status": "ok", "reply": result.get("reply", "handled")} if result else {"status": "ok"}
