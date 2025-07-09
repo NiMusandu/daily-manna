@@ -69,3 +69,26 @@ async def handle_read(phone: str):
 
     await send_whatsapp_message(phone, reading)
     return JSONResponse(content={"message": "Reading sent."}, status_code=200)
+
+    elif message_body == "STATS":
+        return await handle_stats(phone)
+async def handle_stats(phone: str):
+    # Fetch all reading logs for this user
+    result = supabase.table("progress").select("*").eq("phone", phone).execute()
+
+    if not result.data:
+        await send_whatsapp_message(phone, "😢 No reading history found. Type *READ* to start.")
+        return JSONResponse(content={"message": "No stats"}, status_code=200)
+
+    total_days = len(result.data)
+    percent = round((total_days / 365) * 100, 1)
+
+    message = (
+        f"📊 *Your Daily Manna Stats*\n\n"
+        f"✅ Days Read: *{total_days}*\n"
+        f"🎯 Progress: *{percent}%* complete\n"
+        f"🏅 Keep going! You're doing great."
+    )
+
+    await send_whatsapp_message(phone, message)
+    return JSONResponse(content={"message": "Stats sent."}, status_code=200)
