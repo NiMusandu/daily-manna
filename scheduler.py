@@ -1,15 +1,15 @@
+# scheduler.py
 from dotenv import load_dotenv
 load_dotenv()
 
-from config import ULTRA_INSTANCE, ULTRA_TOKEN
+import os
 import asyncio
 import datetime
 from utils.whatsapp import send_whatsapp_message
-from utils.bible import get_daily_reading  # Assuming this returns today's reading
+from utils.bible import get_daily_reading
 from supabase import create_client
-import os
 
-# Supabase client
+# Supabase connection
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
 async def send_daily_readings():
@@ -31,6 +31,5 @@ async def send_daily_readings():
 
         await asyncio.sleep(60)
 
-# ✅ Required entry point
 if __name__ == "__main__":
     asyncio.run(send_daily_readings())
