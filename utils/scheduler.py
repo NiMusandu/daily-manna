@@ -1,39 +1,40 @@
 # utils/scheduler.py
-import schedule
-import time
-import threading
-from utils.supabase_client import supabase
-from utils.ultramsg import send_whatsapp_message
-from bible_readings import BIBLE_READING_PLAN  # Assume this is your 365-day plan
 
-def send_daily_readings():
-    print("📅 Running daily reading scheduler...")
-    users = supabase.table("users").select("*").execute().data
+from supabase import create_client
+from datetime import datetime
+import os
 
-    for user in users:
-        user_id = user["id"]
+from utils.whatsapp import send_whatsapp_message
+from utils.reading_plan import get_reading_for_day
+
+# Initialize Supabase client
+supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
+
+# 🔁 Send reminders to users at their preferred time
+async def send_daily_reminders():
+    now = datetime.utcnow()
+    current_time = now.strftime("%H:%M")  # Format: HH:MM (e.g. "06:00")
+
+    print(f"🕒 Checking reminders for {current_time} UTC...")
+
+    # Query users who requested reminders at this time
+    response = supabase.table("users").select("phone", "start_date").eq("reminder_time", current_time).execute()
+
+    if not response.data:
+        print("📭 No users scheduled for this time.")
+        return
+
+    for user in response.data:
         phone = user["phone"]
-        day = user.get("days_completed", 0)
+        start_date = datetime.fromisoformat(user["start_date"])
+        day_number = (now.date() - start_date.date()).days + 1
 
-        if day < len(BIBLE_READING_PLAN):
-            passage = BIBLE_READING_PLAN[day]
-            message = f"📖 *Day {day + 1} Bible Reading*\n{passage}"
-            send_whatsapp_message(phone, message)
+        reading = get_reading_for_day(day_number)
+        message = (
+            "⏰ *Your Daily Manna Reminder!*\n\n"
+            "Don't forget to read today's passage:\n\n"
+            f"{reading}"
+        )
 
-            # update user progress
-            supabase.table("users").update({"days_completed": day + 1}).eq("id", user_id).execute()
-            print(f"✅ Sent to {phone}: {passage}")
-        else:
-            print(f"🎉 {phone} has completed all 365 readings!")
-
-def start_scheduler():
-    schedule.every().day.at("06:00").do(send_daily_readings)
-
-    def run_scheduler():
-        while True:
-            schedule.run_pending()
-            time.sleep(60)
-
-    thread = threading.Thread(target=run_scheduler, daemon=True)
-    thread.start()
-    print("✅ Daily Bible reading scheduler started (6:00 AM).")
+        await send_whatsapp_message(phone, message)
+        print(f"✅ Reminder sent to {phone}")
