@@ -1,7 +1,6 @@
 # routes/whatsapp.py
 
 from fastapi import APIRouter, Request
-from routes.message_handler import handle_incoming_message
 
 router = APIRouter()
 
