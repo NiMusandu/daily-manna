@@ -18,7 +18,7 @@ def home():
     return """
     <h1>Welcome to Daily Manna 📖</h1>
     <p>This is the backend API for our WhatsApp Bible reading agent.</p>
-    <p>Visit <a href='https://wa.me/254722000001?text=START'>our WhatsApp bot</a> to begin.</p>
+    <p>Visit <a href='https://wa.me/254707626058?text=START'>our WhatsApp bot</a> to begin.</p>
     """
 
 @app.on_event("startup")
