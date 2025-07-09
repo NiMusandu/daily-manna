@@ -112,18 +112,16 @@ async def handle_stats(phone: str):
 
 # ⏰ REMIND command
 async def handle_remind(phone: str, message: str):
-    # Match "REMIND HH:MM" exactly
+    # Match "REMIND HH:MM" (flexible format)
     match = re.search(r"REMIND\s+(\d{1,2}):(\d{2})", message.upper())
-        hour, minute = match.groups()
-	time_str = f"{int(hour):02d}:{minute}"
     if not match:
         await send_whatsapp_message(phone,
             "⏰ Please use the correct format:\n\n*REMIND HH:MM*\nFor example:\nREMIND 07:30"
         )
         return JSONResponse(content={"message": "Invalid REMIND format"}, status_code=200)
 
-    hour, minute = match.groups()
-    time_str = f"{hour}:{minute}"
+    hour, minute = match.groups()  # ✅ Line 117 — make sure it's not over-indented
+    time_str = f"{int(hour):02d}:{minute}"
 
     supabase.table("users").update({"reminder_time": time_str}).eq("phone", phone).execute()
 
