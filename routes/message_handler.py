@@ -1,44 +1,43 @@
-# routes/whatsapp.py
+from fastapi.responses import JSONResponse
+from supabase import create_client
+import os
+from datetime import datetime
+from utils.send_message import send_whatsapp_message
 
-from fastapi import APIRouter, Request
+supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
-router = APIRouter()
+async def handle_incoming_message(payload: dict):
+    data = payload.get("data", {})
+    message_body = data.get("body", "").strip().upper()
+    phone = data.get("from", "").replace("@c.us", "")
+    pushname = data.get("pushname", "Friend")
 
-async def handle_incoming_message(payload):
-    # your logic here
-    return {"message": "START command received"}
+    if message_body == "START":
+        return await handle_start(phone, pushname)
 
-@router.post("/")  # This will be mounted at /webhook if you set prefix="/webhook"
-async def whatsapp_webhook(request: Request):
-    try:
-        data = await request.json()
-        print("📥 RAW JSON DATA:", data)
+    # Future command routing (READ, HELP, REFLECT, etc.)
+    return JSONResponse(content={"message": f"Command '{message_body}' received."}, status_code=200)
 
-        result = await handle_incoming_message(data)
-
-        if result and "reply" in result:
-            return {"status": "ok", "reply": result["reply"]}
-        
-        return {"status": "ok"}
-
-    except Exception as e:
-        print("❌ Error while handling WhatsApp webhook:", e)
-        return {"status": "error", "detail": str(e)}
-
-from utils.whatsapp import send_whatsapp_message  # you'd implement this
-
-async def handle_incoming_message(payload):
-    message = payload["data"].get("body", "").strip().upper()
-    sender = payload["data"].get("author") or payload["data"].get("from")
-
-    if message == "START":
-        await send_whatsapp_message(sender, "🎉 Welcome to Daily Manna!")
-    elif message == "READ":
-        await send_whatsapp_message(sender, "📖 Today's Reading: John 3:16")
+async def handle_start(phone: str, name: str):
+    # Check if user exists
+    existing = supabase.table("users").select("id").eq("phone", phone).execute()
+    if existing.data:
+        await send_whatsapp_message(phone, "📖 You're already registered. Type *READ* to continue.")
     else:
-        await send_whatsapp_message(sender, "🤖 Unknown command. Try: START or READ")
+        # Create user
+        supabase.table("users").insert({
+            "phone": phone,
+            "name": name,
+            "start_date": datetime.utcnow().isoformat()
+        }).execute()
 
-    return {"status": "ok"}
+        welcome_msg = (
+            f"👋 Hello {name}!\n\n"
+            "Welcome to *Daily Manna* 📖.\n"
+            "You’ll receive a Bible passage every day.\n\n"
+            "Type *READ* to get your first reading.\n"
+            "Type *HELP* to see available commands."
+        )
+        await send_whatsapp_message(phone, welcome_msg)
 
-
-
+    return JSONResponse(content={"message": "START command handled."}, status_code=200)

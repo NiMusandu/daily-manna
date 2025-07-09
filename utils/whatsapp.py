@@ -1,32 +1,22 @@
-import os
 import httpx
-
-ULTRA_TOKEN = os.getenv("ULTRA_TOKEN")
-ULTRA_INSTANCE = os.getenv("ULTRA_INSTANCE")
-
-async def send_whatsapp_message(phone_number, message):
-    url = f"https://api.ultramsg.com/{ULTRA_INSTANCE}/messages/chat"
-    payload = {
-        "token": ULTRA_TOKEN,
-        "to": phone_number,
-        "body": message
-    }
-    async with httpx.AsyncClient() as client:
-        await client.post(url, data=payload)
-
-# utils/whatsapp.py
-import requests
 import os
 
-ULTRA_TOKEN = os.getenv("ULTRA_TOKEN")
-ULTRA_INSTANCE = os.getenv("ULTRA_INSTANCE")
+ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
+ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
 
-def send_whatsapp_message(to, message):
-    url = f"https://api.ultramsg.com/{ULTRA_INSTANCE}/messages/chat"
-    payload = {
-        "token": ULTRA_TOKEN,
-        "to": to,
-        "body": message
-    }
-    response = requests.post(url, data=payload)
-    return response.json()
+ULTRAMSG_API_URL = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
+
+async def send_whatsapp_message(to_number: str, message: str):
+    async with httpx.AsyncClient() as client:
+        payload = {
+            "token": ULTRAMSG_TOKEN,
+            "to": to_number,
+            "body": message,
+            "priority": 10,
+            "referenceId": "daily-manna"
+        }
+        try:
+            res = await client.post(ULTRAMSG_API_URL, data=payload)
+            print("📤 Sent message:", res.json())
+        except Exception as e:
+            print("❌ Failed to send WhatsApp message:", str(e))
