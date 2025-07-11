@@ -1,5 +1,3 @@
-# routes/whatsapp.py
-
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from services.message_handler import handle_incoming_message

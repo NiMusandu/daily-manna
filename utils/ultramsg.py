@@ -1,10 +1,5 @@
-# utils/ultramsg.py
-
 import httpx
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
 ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
@@ -17,12 +12,9 @@ async def send_whatsapp_message(to_number: str, message: str):
         "body": message
     }
 
-    print(f"📤 Sending message to {to_number}")
     async with httpx.AsyncClient() as client:
         try:
             res = await client.post(url, data=payload)
             print("📬 WhatsApp send response:", res.text)
-            if res.status_code != 200:
-                print("❌ Failed to send:", res.status_code, res.text)
         except Exception as e:
             print("❌ WhatsApp send error:", str(e))

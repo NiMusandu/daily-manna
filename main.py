@@ -1,16 +1,11 @@
-# main.py
-
 from fastapi import FastAPI
 from routes.whatsapp import router as whatsapp_router
 
 app = FastAPI()
 
-# Include WhatsApp webhook route
+# Do not add prefix, keep path as /webhook
 app.include_router(whatsapp_router)
 
-# Optional: health check route
 @app.get("/")
-def home():
-    return {
-        "message": "📖 Welcome to the Daily Manna WhatsApp API"
-    }
+async def home():
+    return {"message": "✅ Daily Manna backend is running."}
