@@ -1,33 +1,32 @@
-# main.py
-
-from dotenv import load_dotenv
-load_dotenv()
-
 from fastapi import FastAPI
-from utils.supabase_client import supabase  # ✅ Single source of truth
-
+from dotenv import load_dotenv
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
-from utils.scheduler import send_daily_reminders
 
 from routes.whatsapp import router as whatsapp_router
 from routes.join import router as join_router
+from utils.scheduler import send_daily_reminders
+
+load_dotenv()
 
 app = FastAPI()
 
-# Include routes
-app.include_router(whatsapp_router, prefix="/webhook")
+# ✅ Register routers (no prefix for /webhook)
+app.include_router(whatsapp_router)
 app.include_router(join_router)
 
-# Scheduler setup
+# ✅ Scheduler setup
 scheduler = AsyncIOScheduler()
 
 @app.on_event("startup")
 async def startup_event():
-    print("✅ Backend is live.")
+    print("✅ Daily Manna backend is live.")
     scheduler.add_job(send_daily_reminders, CronTrigger(minute="0", second="0"))
     scheduler.start()
 
 @app.get("/")
-def home():
-    return {"message": "📖 Welcome to Daily Manna backend"}
+async def home():
+    return {
+        "message": "📖 Welcome to Daily Manna backend!",
+        "whatsapp_bot": "https://wa.me/254707626058?text=START"
+    }
