@@ -1,13 +1,15 @@
+import re
+from datetime import datetime
 from utils.supabase_client import supabase
 from utils.ultramsg import send_whatsapp_message
-from datetime import datetime
-import re
+
 
 def normalize_user_id(raw_id: str) -> str:
     return raw_id if "@c.us" in raw_id else raw_id + "@c.us"
 
+
 async def register_user(user_id: str, name: str):
-    print("📌 Registering user:", user_id)
+    print(f"📌 Registering user: {user_id}")
     existing = supabase.table("users").select("*").eq("user_id", user_id).execute()
 
     if existing.data:
@@ -24,6 +26,7 @@ async def register_user(user_id: str, name: str):
     print("✅ Registered successfully")
     return {"message": f"✅ You're now registered, {name}!"}
 
+
 async def handle_incoming_message(payload):
     data = payload.get("data", {})
     raw_id = data.get("author") or data.get("from")
@@ -34,18 +37,21 @@ async def handle_incoming_message(payload):
 
     print(f"📨 {command} from {user_id}")
 
+    # START – Register the user
     if command == "START":
         response = await register_user(user_id, name)
         return await send_whatsapp_message(user_id, response["message"])
 
-    elif command.startswith("READ"):
+    # READ – Log daily Bible reading
+    if command.startswith("READ"):
         supabase.table("progress").upsert({
             "user_id": user_id,
             "days_completed": 1
         }).execute()
         return await send_whatsapp_message(user_id, "✅ Your Bible reading progress has been recorded. Keep going!")
 
-    elif command.startswith("REFLECT"):
+    # REFLECT – Save a reflection
+    if command.startswith("REFLECT"):
         reflection_text = message[7:].strip()
         supabase.table("reflections").insert({
             "user_id": user_id,
@@ -53,15 +59,16 @@ async def handle_incoming_message(payload):
         }).execute()
         return await send_whatsapp_message(user_id, "🙏 Reflection saved. May God bless your meditation.")
 
-    elif command == "STATS":
+    # STATS – Show progress
+    if command == "STATS":
         response = supabase.table("progress").select("*").eq("user_id", user_id).execute()
         if response.data:
             days = response.data[0].get("days_completed", 0)
             return await send_whatsapp_message(user_id, f"📊 You’ve completed {days} day(s) of Bible reading. Keep going!")
-        else:
-            return await send_whatsapp_message(user_id, "📊 No progress found. Start by sending READ after reading your Bible.")
+        return await send_whatsapp_message(user_id, "📊 No progress found. Start by sending READ after reading your Bible.")
 
-    elif command.startswith("REMIND"):
+    # REMIND – Set daily reminder time
+    if command.startswith("REMIND"):
         match = re.search(r"REMIND\s+(\d{1,2}):(\d{2})", message)
         if match:
             hour, minute = match.groups()
@@ -71,16 +78,16 @@ async def handle_incoming_message(payload):
                 "reminder_active": True
             }).eq("user_id", user_id).execute()
             return await send_whatsapp_message(user_id, f"✅ Reminder set for *{reminder_time}* daily!")
-        else:
-            return await send_whatsapp_message(user_id, "❌ Invalid format. Use: REMIND 6:30")
+        return await send_whatsapp_message(user_id, "❌ Invalid format. Use: REMIND 6:30")
 
-    elif command == "STOP REMINDER":
+    # STOP REMINDER – Disable reminders
+    if command == "STOP REMINDER":
         supabase.table("users").update({
             "reminder_active": False
         }).eq("user_id", user_id).execute()
         return await send_whatsapp_message(user_id, "🛑 Daily reminders turned *off*.")
 
-    # Bible version selection
+    # BIBLE VERSION – Update preference
     supported_versions = ["KJV", "NIV", "ESV"]
     if command in supported_versions:
         supabase.table("users").update({
@@ -88,7 +95,7 @@ async def handle_incoming_message(payload):
         }).eq("user_id", user_id).execute()
         return await send_whatsapp_message(user_id, f"✅ Bible version set to *{command}*.")
 
-    # Time format (e.g., 6:30AM or 18:00)
+    # TIME FORMAT – e.g., 6:30 AM or 18:00
     time_pattern = re.compile(r"^([0-1]?[0-9]|2[0-3]):([0-5][0-9])\s?(AM|PM)?$", re.IGNORECASE)
     match = time_pattern.match(message)
     if match:
@@ -96,6 +103,7 @@ async def handle_incoming_message(payload):
         minute = int(match.group(2))
         meridian = match.group(3)
 
+        # Convert to 24-hour format if needed
         if meridian:
             meridian = meridian.upper()
             if meridian == "PM" and hour != 12:
@@ -110,5 +118,5 @@ async def handle_incoming_message(payload):
 
         return await send_whatsapp_message(user_id, f"⏰ Reminder time set to *{reminder_time}*. You’ll now receive your Daily Manna.")
 
-    # Fallback
-    return await send_whatsapp_message(user_id, "❓ I didn’t understand that. Send READ, REFLECT <text>, STATS, or START.")
+    # Fallback – Unrecognized command
+    return await send_whatsapp_message(user_id, "❓ I didn’t understand that. Send START, READ, REFLECT <text>, STATS, or REMIND <time>.")
