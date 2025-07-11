@@ -120,3 +120,5 @@ async def handle_incoming_message(payload):
 
     # Fallback – Unrecognized command
     return await send_whatsapp_message(user_id, "❓ I didn’t understand that. Send START, READ, REFLECT <text>, STATS, or REMIND <time>.")
+
+
