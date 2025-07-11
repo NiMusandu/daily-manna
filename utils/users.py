@@ -1,14 +1,6 @@
 async def register_user(user_id: str, name: str):
     from datetime import datetime
-    print("📌 Registering user:", user_id)
 
-    # Print existing check (if needed)
-    existing = supabase.table("users").select("*").eq("user_id", user_id).execute()
-    if existing.data:
-        print("👤 Already registered")
-        return {"message": f"👋 Welcome back, {name}!"}
-
-    # Insert payload
     data = {
         "user_id": user_id,
         "name": name,
@@ -17,13 +9,13 @@ async def register_user(user_id: str, name: str):
         "reminder_active": True
     }
 
-    print("📝 Insert payload:", data)
+    print("📝 Trying to insert this payload into Supabase users table:")
+    print(data)
 
-    # Now try to insert
     try:
-        supabase.table("users").insert(data).execute()
-        print("✅ Registered successfully")
+        result = supabase.table("users").insert(data).execute()
+        print("✅ Insert result:", result)
         return {"message": f"✅ You're now registered, {name}!"}
     except Exception as e:
-        print("❌ Supabase insert error:", e)
+        print("❌ Supabase insert failed with:", e)
         raise

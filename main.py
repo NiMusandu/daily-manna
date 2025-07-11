@@ -1,6 +1,9 @@
 from dotenv import load_dotenv
 load_dotenv()
 
+role = supabase.rpc("auth.role").execute()
+print("🔐 Supabase role:", role.data)
+
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
