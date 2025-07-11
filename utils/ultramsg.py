@@ -1,21 +1,28 @@
+# utils/ultramsg.py
+
 import httpx
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-ULTRA_TOKEN = os.getenv("ULTRA_TOKEN")
-ULTRA_INSTANCE_ID = os.getenv("ULTRA_INSTANCE")
+ULTRAMSG_INSTANCE_ID = os.getenv("ULTRAMSG_INSTANCE_ID")
+ULTRAMSG_TOKEN = os.getenv("ULTRAMSG_TOKEN")
 
-BASE_URL = f"https://api.ultramsg.com/{ULTRA_INSTANCE_ID}/messages/chat"
+async def send_whatsapp_message(to_number: str, message: str):
+    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
+    payload = {
+        "token": ULTRAMSG_TOKEN,
+        "to": to_number,
+        "body": message
+    }
 
-async def send_whatsapp_message(to: str, message: str):
+    print(f"📤 Sending message to {to_number}")
     async with httpx.AsyncClient() as client:
-        payload = {
-            "token": ULTRA_TOKEN,
-            "to": f"+{to}",  # Ensure it's in international format
-            "body": message
-        }
-        response = await client.post(BASE_URL, data=payload)
-        print(f"✅ WhatsApp API response: {response.text}")
-        return response.json()
+        try:
+            res = await client.post(url, data=payload)
+            print("📬 WhatsApp send response:", res.text)
+            if res.status_code != 200:
+                print("❌ Failed to send:", res.status_code, res.text)
+        except Exception as e:
+            print("❌ WhatsApp send error:", str(e))
