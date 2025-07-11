@@ -10,14 +10,18 @@ def normalize_user_id(raw_id: str) -> str:
 
 async def register_user(user_id: str, name: str):
     print(f"📌 Registering user: {user_id}")
+    
     existing = supabase.table("users").select("*").eq("user_id", user_id).execute()
 
     if existing.data:
         print("👤 Already registered")
         return {"message": f"👋 Welcome back, {name}!"}
 
+    phone_number = user_id.split("@")[0]  # Extract phone (e.g., "254721420119")
+
     supabase.table("users").insert({
         "user_id": user_id,
+        "phone": phone_number,
         "name": name,
         "created_at": datetime.utcnow().isoformat(),
         "reminder_time": "07:00",
