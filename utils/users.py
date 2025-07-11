@@ -1,24 +1,29 @@
-from config import ULTRA_INSTANCE, ULTRA_TOKEN
+async def register_user(user_id: str, name: str):
+    from datetime import datetime
+    print("📌 Registering user:", user_id)
 
-from supabase_client import supabase
-from datetime import datetime
-
-def register_user(phone: str, name: str = None):
-    existing = supabase.table("users").select("*").eq("phone", phone).execute()
-    
+    # Print existing check (if needed)
+    existing = supabase.table("users").select("*").eq("user_id", user_id).execute()
     if existing.data:
-        print("✅ User already exists.")
-        return existing.data[0]
-    
-    new_user = {
-        "phone": phone,
+        print("👤 Already registered")
+        return {"message": f"👋 Welcome back, {name}!"}
+
+    # Insert payload
+    data = {
+        "user_id": user_id,
         "name": name,
-        "joined_at": datetime.utcnow().isoformat(),
-        "last_read_day": 0,
-        "streak": 0,
-        "reminder_time": "06:00:00"
+        "created_at": datetime.utcnow().isoformat(),
+        "reminder_time": "07:00",
+        "reminder_active": True
     }
 
-    response = supabase.table("users").insert(new_user).execute()
-    print("🎉 New user registered:", response.data[0])
-    return response.data[0]
+    print("📝 Insert payload:", data)
+
+    # Now try to insert
+    try:
+        supabase.table("users").insert(data).execute()
+        print("✅ Registered successfully")
+        return {"message": f"✅ You're now registered, {name}!"}
+    except Exception as e:
+        print("❌ Supabase insert error:", e)
+        raise
