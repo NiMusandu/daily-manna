@@ -13,10 +13,6 @@ from utils.scheduler import send_daily_reminders
 from routes.whatsapp import router as whatsapp_router
 from routes.join import router as join_router
 
-# Optional: check the role on startup to verify service key
-role_check = supabase.rpc("auth.role").execute()
-print("🔐 Supabase role:", role_check.data)
-
 app = FastAPI()
 
 # Include routes
