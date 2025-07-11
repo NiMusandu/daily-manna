@@ -1,15 +1,19 @@
-from fastapi import APIRouter, Request
-from services.message_handler import handle_incoming_message  # ✅ correct import
+async def send_whatsapp_message(to_number: str, message: str):
+    print("📤 Sending to:", to_number)
+    print("💬 Message:", message)
 
-router = APIRouter()
+    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
+    payload = {
+        "token": ULTRAMSG_TOKEN,
+        "to": to_number,
+        "body": message
+    }
 
-@router.post("/webhook")  # ✅ correct endpoint
-async def webhook(request: Request):
-    try:
-        payload = await request.json()
-        print(f"📥 Incoming WhatsApp Payload: {payload}")
-        response = await handle_incoming_message(payload)
-        return response
-    except Exception as e:
-        print(f"❌ Failed to process WhatsApp webhook: {e}")
-        return {"error": "Webhook failed"}
+    print("📤 Payload:", payload)  # ✅ log payload before sending
+
+    async with httpx.AsyncClient() as client:
+        try:
+            response = await client.post(url, data=payload)
+            print("📬 Ultramsg response:", response.status_code, response.text)  # ✅ log full response
+        except Exception as e:
+            print("❌ WhatsApp send error:", str(e))
