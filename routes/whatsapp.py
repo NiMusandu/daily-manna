@@ -6,7 +6,7 @@ from services.message_handler import handle_incoming_message
 
 router = APIRouter()
 
-@router.api_route("/webhook", methods=["POST", "OPTIONS"])
+@router.api_route("/", methods=["POST", "OPTIONS"])
 async def webhook(request: Request):
     if request.method == "OPTIONS":
         return JSONResponse(status_code=200, content={"status": "ok"})
@@ -21,4 +21,4 @@ async def webhook(request: Request):
 
     except Exception as e:
         print("❌ Webhook error:", e)
-        return JSONResponse(content={"error": "Webhook failed"}, status_code=500)
+        return JSONResponse(content={"error": str(e)}, status_code=500)
