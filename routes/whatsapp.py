@@ -4,17 +4,17 @@ from services.message_handler import handle_incoming_message
 
 router = APIRouter()
 
-# Handle POST and OPTIONS to /webhook and /webhook/ equivalently
-@router.api_route("", methods=["POST", "OPTIONS"])
+@router.api_route("/webhook", methods=["POST", "OPTIONS"])
 async def webhook(request: Request):
     if request.method == "OPTIONS":
-        return JSONResponse(status_code=200, content={"status": "ok"})
+        return JSONResponse(content={"status": "ok"}, status_code=200)
 
     try:
         payload = await request.json()
         print("📥 Incoming WhatsApp Payload:", payload)
 
         await handle_incoming_message(payload)
+
         return JSONResponse(content={"status": "ok"}, status_code=200)
 
     except Exception as e:

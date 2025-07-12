@@ -3,10 +3,8 @@ from datetime import datetime
 from utils.supabase_client import supabase
 from utils.ultramsg import send_whatsapp_message
 
-
 def normalize_user_id(raw_id: str) -> str:
     return raw_id if "@c.us" in raw_id else raw_id + "@c.us"
-
 
 async def register_user(user_id: str, name: str):
     print(f"📌 Registering user: {user_id}")
@@ -18,6 +16,7 @@ async def register_user(user_id: str, name: str):
 
     supabase.table("users").insert({
         "user_id": user_id,
+        "phone": user_id.replace("@c.us", ""),  # Ensure phone field is set
         "name": name,
         "created_at": datetime.utcnow().isoformat(),
         "reminder_time": "07:00",
@@ -27,13 +26,12 @@ async def register_user(user_id: str, name: str):
     print("✅ Registered successfully")
     return {"message": f"✅ You're now registered, {name}!"}
 
-
 async def handle_incoming_message(payload):
     data = payload.get("data", {})
 
-    # ✅ Skip messages from bot itself or non-user-generated
+    # ✅ Prevent infinite loop: Ignore messages sent by the bot itself
     if data.get("fromMe") or data.get("self") or data.get("ack"):
-        print("📭 Ignoring outgoing/bot/self message.")
+        print("📭 Ignoring bot/self/ack message:", data.get("body"))
         return
 
     raw_id = data.get("author") or data.get("from")
@@ -118,7 +116,7 @@ async def handle_incoming_message(payload):
             elif meridian == "AM" and hour == 12:
                 hour = 0
 
-        reminder_time = f"{hour:02d}:{minute:02d}"
+        reminder_time = f"{hour:02d}:{minute}"
         supabase.table("users").update({
             "reminder_time": reminder_time
         }).eq("user_id", user_id).execute()
