@@ -10,7 +10,7 @@ async def send_whatsapp_message(to_number: str, message: str):
     print("📤 Sending to:", to_number)
     print("💬 Message:", message)
 
-    # ✅ Token moved to query param
+    # ✅ Token is passed in the query string, not payload
     url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat?token={ULTRAMSG_TOKEN}"
 
     payload = {
@@ -23,4 +23,4 @@ async def send_whatsapp_message(to_number: str, message: str):
             res = await client.post(url, data=payload)
             print("📬 WhatsApp API response:", res.text)
         except Exception as e:
-            print("❌ WhatsApp send error:", e)
+            print("❌ WhatsApp send error:", str(e))
