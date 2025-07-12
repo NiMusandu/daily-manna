@@ -26,12 +26,14 @@ async def register_user(user_id: str, name: str):
     print("✅ Registered successfully")
     return {"message": f"✅ You're now registered, {name}!"}
 
+
 async def handle_incoming_message(payload):
     data = payload.get("data", {})
+    event_type = payload.get("event_type")
 
-    # ✅ Prevent infinite loop: Ignore messages sent by the bot itself
-    if data.get("fromMe") or data.get("self") or data.get("ack"):
-        print("📭 Ignoring bot/self/ack message:", data.get("body"))
+    # ✅ Ignore bot/self messages and non-user event types
+    if event_type != "message_received" or data.get("fromMe") or data.get("self") or data.get("ack"):
+        print("📭 Ignoring non-user or self-generated message:", data.get("body"))
         return
 
     raw_id = data.get("author") or data.get("from")
