@@ -10,12 +10,12 @@ async def send_whatsapp_message(to_number: str, message: str):
     print("📤 Sending to:", to_number)
     print("💬 Message:", message)
 
-    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat"
+    # ✅ Token moved to query param
+    url = f"https://api.ultramsg.com/{ULTRAMSG_INSTANCE_ID}/messages/chat?token={ULTRAMSG_TOKEN}"
 
     payload = {
-        "token": ULTRAMSG_TOKEN,
         "to": to_number,
-        "body": message,
+        "body": message
     }
 
     async with httpx.AsyncClient() as client:
