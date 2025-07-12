@@ -3,8 +3,10 @@ from datetime import datetime
 from utils.supabase_client import supabase
 from utils.ultramsg import send_whatsapp_message
 
+
 def normalize_user_id(raw_id: str) -> str:
     return raw_id if "@c.us" in raw_id else raw_id + "@c.us"
+
 
 async def register_user(user_id: str, name: str):
     print(f"📌 Registering user: {user_id}")
@@ -16,7 +18,7 @@ async def register_user(user_id: str, name: str):
 
     supabase.table("users").insert({
         "user_id": user_id,
-        "phone": user_id.replace("@c.us", ""),  # Ensure phone field is set
+        "phone": user_id.replace("@c.us", ""),
         "name": name,
         "created_at": datetime.utcnow().isoformat(),
         "reminder_time": "07:00",
@@ -29,11 +31,15 @@ async def register_user(user_id: str, name: str):
 
 async def handle_incoming_message(payload):
     data = payload.get("data", {})
-    event_type = payload.get("event_type")
+    event_type = payload.get("event_type", "")
 
-    # ✅ Ignore bot/self messages and non-user event types
-    if event_type != "message_received" or data.get("fromMe") or data.get("self") or data.get("ack"):
-        print("📭 Ignoring non-user or self-generated message:", data.get("body"))
+    # ✅ Prevent infinite loop by skipping bot's own messages and other events
+    if event_type != "message_received":
+        print("📭 Ignoring non-message_received event:", event_type)
+        return
+
+    if data.get("fromMe") or data.get("self") or data.get("ack"):
+        print("📭 Ignoring bot/self/ack message:", data.get("body"))
         return
 
     raw_id = data.get("author") or data.get("from")
@@ -110,7 +116,6 @@ async def handle_incoming_message(payload):
         minute = int(match.group(2))
         meridian = match.group(3)
 
-        # Convert to 24-hour format if needed
         if meridian:
             meridian = meridian.upper()
             if meridian == "PM" and hour != 12:
@@ -125,5 +130,5 @@ async def handle_incoming_message(payload):
 
         return await send_whatsapp_message(user_id, f"⏰ Reminder time set to *{reminder_time}*. You’ll now receive your Daily Manna.")
 
-    # Fallback – Unrecognized command
+    # Default fallback
     return await send_whatsapp_message(user_id, "❓ I didn’t understand that. Send START, READ, REFLECT <text>, STATS, or REMIND <time>.")
